@@ -327,22 +327,6 @@ h1 {
     grid-template-columns: 1fr;
   }
 
-  @media (prefers-reduced-motion: reduce) {
-    html {
-      scroll-behavior: auto;
-    }
-
-    .reveal {
-      opacity: 1;
-      transform: none;
-      transition: none;
-    }
-
-    .back-to-top {
-      transition: none;
-    }
-  }
-
   .menu-toggle {
     display: inline-flex;
   }
@@ -375,5 +359,21 @@ h1 {
 
   .hero {
     padding-top: 4rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .back-to-top {
+    transition: none;
   }
 }

@@ -6,8 +6,9 @@ const phrases = [
 ];
 
 const typingTarget = document.getElementById('typing-text');
-const TYPING_SPEED_ADD = 70;
-const TYPING_SPEED_DELETE = 40;
+const TYPING_DELAY_MS = 70;
+const DELETE_DELAY_MS = 40;
+// Balanced to reveal cards shortly after entering viewport while avoiding early off-screen triggering.
 const REVEAL_THRESHOLD = 0.16;
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 let phraseIndex = 0;
@@ -35,7 +36,7 @@ function type() {
     }
   }
 
-  setTimeout(type, deleting ? TYPING_SPEED_DELETE : TYPING_SPEED_ADD);
+  setTimeout(type, deleting ? DELETE_DELAY_MS : TYPING_DELAY_MS);
 }
 
 if (!prefersReducedMotion) {
@@ -52,7 +53,6 @@ if (!prefersReducedMotion) {
         observer.unobserve(entry.target);
       }
     });
-    // Trigger slightly before full visibility so animations feel responsive while scrolling.
   }, { threshold: REVEAL_THRESHOLD });
 
   document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
