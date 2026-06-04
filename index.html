@@ -3,198 +3,155 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Susan Shrestha | Portfolio</title>
-  <meta name="description" content="Portfolio of Susan Shrestha - AI/ML Engineer building GraphRAG, multimodal AI, and production-ready intelligent systems.">
+  <title>Susan Shrestha | Portfolio IDE</title>
+  <meta name="description" content="VS Code themed portfolio of Susan Shrestha — AI/ML engineer focused on GraphRAG, multimodal retrieval, and production-ready intelligent systems.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
-  <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
-
-  <header class="site-header">
-    <nav class="wrapper nav" aria-label="Primary navigation">
-      <a class="brand" href="#home">Susan</a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
-      <div id="nav-links" class="nav-links">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
+  <a class="skip-link" href="#editor-content">Skip to main content</a>
+  <div class="app-shell">
+    <header class="title-bar" aria-label="Editor title bar">
+      <div class="window-controls" aria-hidden="true">
+        <span class="dot dot-close"></span>
+        <span class="dot dot-min"></span>
+        <span class="dot dot-max"></span>
       </div>
-    </nav>
-  </header>
+      <p class="window-title">5usan.github.io — Portfolio — Visual Studio Code</p>
+      <button id="sidebar-toggle" class="sidebar-toggle" type="button" aria-expanded="true" aria-controls="explorer">Explorer</button>
+    </header>
 
-  <main id="home">
-    <section class="hero wrapper reveal">
-      <p class="eyebrow">AI/ML Engineer • Software Developer</p>
-      <h1>Hi, I'm Susan Shrestha.</h1>
-      <p class="typing-line"><span class="sr-only">Building intelligent backend systems, data-driven products, and AI pipelines.</span><span id="typing-text" aria-hidden="true"></span></p>
-      <p class="lead">I build intelligent backend systems, multimodal retrieval pipelines, and production-ready AI workflows that move from research to real impact.</p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="mailto:susanshrestha2056@gmail.com" class="btn btn-secondary">Email Me</a>
-      </div>
-      <ul class="stats" aria-label="Portfolio statistics">
-        <li><strong>10+</strong><span>AI/ML Projects</span></li>
-        <li><strong>4</strong><span>Recent Roles</span></li>
-        <li><strong>6+</strong><span>Core Domains</span></li>
-      </ul>
-    </section>
+    <div class="workspace">
+      <nav class="activity-bar" aria-label="Activity bar">
+        <button class="activity-icon active" type="button" data-target="about" aria-label="Open About" title="About">▦</button>
+        <button class="activity-icon" type="button" data-target="projects" aria-label="Open Projects" title="Projects">⌘</button>
+        <button class="activity-icon" type="button" data-target="experience" aria-label="Open Experience" title="Experience">☰</button>
+        <button class="activity-icon" type="button" data-target="contact" aria-label="Open Contact" title="Contact">✉</button>
+      </nav>
 
-    <section id="about" class="wrapper section reveal">
-      <div class="section-heading">
-        <h2>About Me</h2>
-      </div>
-      <div class="about-grid panel">
-        <div>
-          <p>I'm an AI/ML engineer focused on graph-enhanced retrieval, LLM systems, and computer vision. I enjoy combining strong software engineering with practical research so models can deliver real-world outcomes.</p>
-          <p>My work spans GraphRAG, federated learning, multimodal retrieval, and deployment-ready APIs for intelligent applications.</p>
+      <aside id="explorer" class="explorer" aria-label="Portfolio explorer">
+        <div class="explorer-head">
+          <p class="explorer-label">Explorer</p>
+          <h1>5usan Portfolio</h1>
         </div>
-        <img src="https://media.giphy.com/media/L1R1tvI9svkIWwpVYr/giphy.gif" alt="">
-      </div>
-    </section>
 
-    <section class="wrapper section reveal">
-      <div class="section-heading">
-        <h2>Find Me Here</h2>
-      </div>
-      <div class="social-links panel">
-        <a href="https://www.linkedin.com/in/5usan" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a href="mailto:susanshrestha2056@gmail.com">Gmail</a>
-        <a href="https://github.com/5usan" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="https://medium.com/@susanshrestha2056" target="_blank" rel="noreferrer">Medium</a>
-        <a href="https://www.youtube.com/@5usan" target="_blank" rel="noreferrer">YouTube</a>
-        <a href="https://leetcode.com/u/5usan/" target="_blank" rel="noreferrer">LeetCode</a>
-      </div>
-    </section>
+        <section class="profile-card">
+          <p class="mono">SUSAN.SHRESTHA</p>
+          <p>AI/ML Engineer · Software Developer</p>
+          <p class="muted">Building GraphRAG, multimodal pipelines, and practical AI systems.</p>
+          <div class="quick-links">
+            <a href="https://github.com/5usan" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/5usan" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="mailto:susanshrestha2056@gmail.com">Email</a>
+          </div>
+        </section>
 
-    <section id="skills" class="wrapper section reveal">
-      <div class="section-heading">
-        <h2>Tech Stack</h2>
-      </div>
-      <div class="skills-grid">
-        <article class="panel">
-          <h3>Languages</h3>
-          <p>Python, JavaScript, SQL, C++, HTML/CSS</p>
-        </article>
-        <article class="panel">
-          <h3>AI · ML</h3>
-          <p>PyTorch, Scikit-learn, Transformers, Hugging Face, OpenCV, YOLO</p>
-        </article>
-        <article class="panel">
-          <h3>LLM Stack</h3>
-          <p>GraphRAG, RAG, LangChain/LangGraph, Fine-tuning, Prompt Engineering</p>
-        </article>
-        <article class="panel">
-          <h3>Data & Infra</h3>
-          <p>Neo4j, PostgreSQL, MongoDB, Redis, Docker, AWS, Linux</p>
-        </article>
-      </div>
-    </section>
+        <section class="file-tree" aria-label="Portfolio files">
+          <p class="explorer-label">Open Editors</p>
+          <button class="file-item active" type="button" data-target="about">about.md</button>
+          <button class="file-item" type="button" data-target="projects">projects.json</button>
+          <button class="file-item" type="button" data-target="experience">experience.log</button>
+          <button class="file-item" type="button" data-target="contact">contact.yml</button>
+        </section>
+      </aside>
 
-    <section id="projects" class="wrapper section reveal">
-      <div class="section-heading">
-        <h2>Selected Projects</h2>
-      </div>
-      <div class="projects-grid">
-        <article class="panel card">
-          <h3><a href="https://github.com/5usan/GraphRAG" target="_blank" rel="noreferrer">GraphRAG</a></h3>
-          <p>Knowledge-graph augmented retrieval and reasoning workflows for LLM-powered applications.</p>
-        </article>
-        <article class="panel card">
-          <h3><a href="https://github.com/5usan/Multimodal-RAG" target="_blank" rel="noreferrer">Multimodal-RAG</a></h3>
-          <p>Cross-modal retrieval and response generation combining text and visual context.</p>
-        </article>
-        <article class="panel card">
-          <h3><a href="https://github.com/5usan/Federated-LLM-Learning" target="_blank" rel="noreferrer">Federated-LLM-Learning</a></h3>
-          <p>Privacy-preserving LLM training patterns with federated optimization strategies.</p>
-        </article>
-        <article class="panel card">
-          <h3><a href="https://github.com/5usan/Face-Detection" target="_blank" rel="noreferrer">Face-Detection</a></h3>
-          <p>YOLO/OpenCV vision experiments focused on practical and efficient detection performance.</p>
-        </article>
-        <article class="panel card">
-          <h3><a href="https://github.com/5usan/Few-Shot-GNN-LLM" target="_blank" rel="noreferrer">Few-Shot-GNN-LLM</a></h3>
-          <p>Few-shot learning with graph structures and language models for low-data scenarios.</p>
-        </article>
-        <article class="panel card">
-          <h3><a href="https://github.com/5usan/Graph-Augmentation-using-LLMs-for-Text-Attributed-GNNs" target="_blank" rel="noreferrer">Graph-Augmentation using LLMs</a></h3>
-          <p>LLM-assisted graph enhancement methods for text-attributed GNN tasks.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="experience" class="wrapper section reveal">
-      <div class="section-heading">
-        <h2>Experience</h2>
-      </div>
-      <div class="timeline">
-        <article class="panel">
-          <h3>AI Developer — Wright State University</h3>
-          <p>Built persona-consistent LLM chat systems and AI voice pipeline prototypes.</p>
-        </article>
-        <article class="panel">
-          <h3>Software Engineer — Vairav Technology</h3>
-          <p>Built SOC automation and QR/LLM-integrated scam detection workflows.</p>
-        </article>
-        <article class="panel">
-          <h3>Graduate Research Assistant</h3>
-          <p>Advanced GraphRAG and ontology-focused reasoning under KASTLE Lab.</p>
-        </article>
-        <article class="panel">
-          <h3>Graduate Teaching Assistant</h3>
-          <p>Supported graduate Computer Science instruction and mentoring.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="wrapper section reveal">
-      <div class="section-heading">
-        <h2>GitHub Stats</h2>
-      </div>
-      <div class="panel stats-embed">
-        <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=5usan&theme=2077" alt="GitHub statistics card">
-        <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=5usan&theme=2077" alt="Top languages card">
-        <img src="https://github-readme-streak-stats.herokuapp.com/?user=5usan&hide_border=true&background=050816&ring=7aa2ff&fire=34d399&currStreakLabel=7aa2ff" alt="GitHub streak stats">
-        <img src="https://github-readme-activity-graph.vercel.app/graph?username=5usan&bg_color=050816&color=7aa2ff&line=34d399&point=e6ebff&area=true&hide_border=true" alt="GitHub activity graph">
-      </div>
-    </section>
-
-    <section class="wrapper section reveal">
-      <div class="section-heading">
-        <h2>Contribution Snake</h2>
-      </div>
-      <div class="panel snake-wrap">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/5usan/5usan/output/github-contribution-grid-snake-dark.svg">
-          <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/5usan/5usan/output/github-contribution-grid-snake.svg">
-          <img src="https://raw.githubusercontent.com/5usan/5usan/output/github-contribution-grid-snake-dark.svg" alt="Contribution snake animation">
-        </picture>
-      </div>
-    </section>
-
-    <section id="contact" class="wrapper section reveal">
-      <div class="panel contact-panel">
-        <h2>Let's Build Something Impactful</h2>
-        <p>Open to AI/ML engineering, research, and product-focused collaborations.</p>
-        <div class="hero-actions">
-          <a href="mailto:susanshrestha2056@gmail.com" class="btn btn-primary">Get in touch</a>
-          <a href="https://github.com/user-attachments/assets/5f5ab692-e5ba-46a8-98ff-2476e36bff5d" target="_blank" rel="noreferrer" class="btn btn-secondary">View Resume</a>
+      <main class="editor" aria-label="Editor area">
+        <div class="tab-bar" role="tablist" aria-label="Open files">
+          <button id="tab-about" class="tab active" type="button" role="tab" aria-selected="true" aria-controls="panel-about" data-target="about">about.md</button>
+          <button id="tab-projects" class="tab" type="button" role="tab" aria-selected="false" aria-controls="panel-projects" data-target="projects">projects.json</button>
+          <button id="tab-experience" class="tab" type="button" role="tab" aria-selected="false" aria-controls="panel-experience" data-target="experience">experience.log</button>
+          <button id="tab-contact" class="tab" type="button" role="tab" aria-selected="false" aria-controls="panel-contact" data-target="contact">contact.yml</button>
         </div>
-      </div>
-    </section>
-  </main>
 
-  <footer class="wrapper footer">
-    <img src="https://komarev.com/ghpvc/?username=5usan&style=for-the-badge&color=7aa2ff&labelColor=050816&label=PROFILE+VIEWS" alt="GitHub profile view counter badge">
-    <p>© <span id="year"></span> Susan Shrestha</p>
-  </footer>
+        <section id="editor-content" class="editor-content" tabindex="-1">
+          <article id="panel-about" class="panel active" role="tabpanel" aria-labelledby="tab-about">
+            <p class="line"><span class="line-num">1</span><span># About Me</span></p>
+            <p class="line"><span class="line-num">2</span><span>I'm Susan Shrestha, an AI/ML engineer focused on graph-enhanced retrieval, LLM systems, and computer vision.</span></p>
+            <p class="line"><span class="line-num">3</span><span>I build production-ready workflows from research prototypes to deployed impact.</span></p>
+            <p class="line"><span class="line-num">4</span><span></span></p>
+            <p class="line"><span class="line-num">5</span><span>## Core Stack</span></p>
+            <p class="line"><span class="line-num">6</span><span>- Languages: Python, JavaScript, SQL, C++, HTML/CSS</span></p>
+            <p class="line"><span class="line-num">7</span><span>- AI/ML: PyTorch, Scikit-learn, Transformers, Hugging Face, OpenCV, YOLO</span></p>
+            <p class="line"><span class="line-num">8</span><span>- LLM Stack: GraphRAG, RAG, LangChain/LangGraph, Fine-tuning</span></p>
+            <p class="line"><span class="line-num">9</span><span>- Data/Infra: Neo4j, PostgreSQL, MongoDB, Redis, Docker, AWS, Linux</span></p>
+            <p class="line"><span class="line-num">10</span><span></span></p>
+            <p class="line"><span class="line-num">11</span><span>## External Profiles</span></p>
+            <p class="line"><span class="line-num">12</span><span><a href="https://medium.com/@susanshrestha2056" target="_blank" rel="noreferrer">Medium</a> · <a href="https://www.youtube.com/@5usan" target="_blank" rel="noreferrer">YouTube</a> · <a href="https://leetcode.com/u/5usan/" target="_blank" rel="noreferrer">LeetCode</a></span></p>
+          </article>
 
-  <button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top">↑</button>
+          <article id="panel-projects" class="panel" role="tabpanel" aria-labelledby="tab-projects" hidden>
+            <p class="line"><span class="line-num">1</span><span>{</span></p>
+            <p class="line"><span class="line-num">2</span><span>  "selectedProjects": [</span></p>
+            <p class="line"><span class="line-num">3</span><span>    {"name": "GraphRAG", "url": "<a href="https://github.com/5usan/GraphRAG" target="_blank" rel="noreferrer">github.com/5usan/GraphRAG</a>", "focus": "knowledge graph augmented retrieval"},</span></p>
+            <p class="line"><span class="line-num">4</span><span>    {"name": "Multimodal-RAG", "url": "<a href="https://github.com/5usan/Multimodal-RAG" target="_blank" rel="noreferrer">github.com/5usan/Multimodal-RAG</a>", "focus": "text+vision retrieval"},</span></p>
+            <p class="line"><span class="line-num">5</span><span>    {"name": "Federated-LLM-Learning", "url": "<a href="https://github.com/5usan/Federated-LLM-Learning" target="_blank" rel="noreferrer">github.com/5usan/Federated-LLM-Learning</a>", "focus": "privacy-preserving LLM optimization"},</span></p>
+            <p class="line"><span class="line-num">6</span><span>    {"name": "Face-Detection", "url": "<a href="https://github.com/5usan/Face-Detection" target="_blank" rel="noreferrer">github.com/5usan/Face-Detection</a>", "focus": "efficient YOLO/OpenCV detection"},</span></p>
+            <p class="line"><span class="line-num">7</span><span>    {"name": "Few-Shot-GNN-LLM", "url": "<a href="https://github.com/5usan/Few-Shot-GNN-LLM" target="_blank" rel="noreferrer">github.com/5usan/Few-Shot-GNN-LLM</a>", "focus": "graph + language model few-shot learning"},</span></p>
+            <p class="line"><span class="line-num">8</span><span>    {"name": "Graph-Augmentation-using-LLMs", "url": "<a href="https://github.com/5usan/Graph-Augmentation-using-LLMs-for-Text-Attributed-GNNs" target="_blank" rel="noreferrer">github.com/5usan/Graph-Augmentation...</a>", "focus": "LLM-assisted graph enhancement"}</span></p>
+            <p class="line"><span class="line-num">9</span><span>  ]</span></p>
+            <p class="line"><span class="line-num">10</span><span>}</span></p>
+          </article>
+
+          <article id="panel-experience" class="panel" role="tabpanel" aria-labelledby="tab-experience" hidden>
+            <p class="line"><span class="line-num">1</span><span>[2026] AI Developer — Wright State University</span></p>
+            <p class="line"><span class="line-num">2</span><span>Built persona-consistent LLM chat systems and AI voice pipeline prototypes.</span></p>
+            <p class="line"><span class="line-num">3</span><span></span></p>
+            <p class="line"><span class="line-num">4</span><span>[2025] Software Engineer — Vairav Technology</span></p>
+            <p class="line"><span class="line-num">5</span><span>Built SOC automation and QR/LLM-integrated scam detection workflows.</span></p>
+            <p class="line"><span class="line-num">6</span><span></span></p>
+            <p class="line"><span class="line-num">7</span><span>[2025] Graduate Research Assistant</span></p>
+            <p class="line"><span class="line-num">8</span><span>Advanced GraphRAG and ontology-focused reasoning under KASTLE Lab.</span></p>
+            <p class="line"><span class="line-num">9</span><span></span></p>
+            <p class="line"><span class="line-num">10</span><span>[2024] Graduate Teaching Assistant</span></p>
+            <p class="line"><span class="line-num">11</span><span>Supported graduate Computer Science instruction and mentoring.</span></p>
+          </article>
+
+          <article id="panel-contact" class="panel" role="tabpanel" aria-labelledby="tab-contact" hidden>
+            <p class="line"><span class="line-num">1</span><span>name: Susan Shrestha</span></p>
+            <p class="line"><span class="line-num">2</span><span>email: <a href="mailto:susanshrestha2056@gmail.com">susanshrestha2056@gmail.com</a></span></p>
+            <p class="line"><span class="line-num">3</span><span>linkedin: <a href="https://www.linkedin.com/in/5usan" target="_blank" rel="noreferrer">linkedin.com/in/5usan</a></span></p>
+            <p class="line"><span class="line-num">4</span><span>github: <a href="https://github.com/5usan" target="_blank" rel="noreferrer">github.com/5usan</a></span></p>
+            <p class="line"><span class="line-num">5</span><span>resume: <a href="https://github.com/user-attachments/assets/5f5ab692-e5ba-46a8-98ff-2476e36bff5d" target="_blank" rel="noreferrer">view_resume.pdf</a></span></p>
+            <p class="line"><span class="line-num">6</span><span>availability: Open to AI/ML engineering, research, and product-focused collaborations</span></p>
+          </article>
+        </section>
+
+        <section class="terminal" aria-label="Terminal panel">
+          <div class="terminal-head">
+            <p>TERMINAL</p>
+            <span>bash</span>
+          </div>
+          <div class="terminal-body">
+            <p><span class="prompt">susan@portfolio:~$</span> cat github-stats.txt</p>
+            <div class="stats-grid">
+              <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=5usan&theme=2077" alt="GitHub statistics card">
+              <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=5usan&theme=2077" alt="Top languages card">
+              <img src="https://github-readme-streak-stats.herokuapp.com/?user=5usan&hide_border=true&background=050816&ring=7aa2ff&fire=34d399&currStreakLabel=7aa2ff" alt="GitHub streak stats">
+              <img src="https://github-readme-activity-graph.vercel.app/graph?username=5usan&bg_color=050816&color=7aa2ff&line=34d399&point=e6ebff&area=true&hide_border=true" alt="GitHub activity graph">
+            </div>
+            <p><span class="prompt">susan@portfolio:~$</span> cat contribution-snake.svg</p>
+            <picture>
+              <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/5usan/5usan/output/github-contribution-grid-snake-dark.svg">
+              <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/5usan/5usan/output/github-contribution-grid-snake.svg">
+              <img class="snake" src="https://raw.githubusercontent.com/5usan/5usan/output/github-contribution-grid-snake-dark.svg" alt="Contribution snake animation">
+            </picture>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="status-bar" aria-label="Status bar">
+      <p>main</p>
+      <p>UTF-8</p>
+      <p>Ln 1, Col 1</p>
+      <p id="active-file">about.md</p>
+      <p id="clock">--:--</p>
+      <p>© <span id="year"></span> Susan Shrestha</p>
+    </footer>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
