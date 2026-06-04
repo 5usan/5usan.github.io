@@ -9,6 +9,7 @@ const typingTarget = document.getElementById('typing-text');
 const TYPING_SPEED_ADD = 70;
 const TYPING_SPEED_DELETE = 40;
 const REVEAL_THRESHOLD = 0.16;
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 let phraseIndex = 0;
 let charIndex = 0;
 let deleting = false;
@@ -37,19 +38,27 @@ function type() {
   setTimeout(type, deleting ? TYPING_SPEED_DELETE : TYPING_SPEED_ADD);
 }
 
-type();
+if (!prefersReducedMotion) {
+  type();
+} else if (typingTarget) {
+  typingTarget.textContent = phrases[0];
+}
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
-  });
-// Trigger slightly before full visibility so animations feel responsive while scrolling.
-}, { threshold: REVEAL_THRESHOLD });
+if (!prefersReducedMotion) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+    // Trigger slightly before full visibility so animations feel responsive while scrolling.
+  }, { threshold: REVEAL_THRESHOLD });
 
-document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
+  document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
+} else {
+  document.querySelectorAll('.reveal').forEach((element) => element.classList.add('visible'));
+}
 
 const topButton = document.getElementById('back-to-top');
 window.addEventListener('scroll', () => {
@@ -58,7 +67,7 @@ window.addEventListener('scroll', () => {
 });
 
 topButton?.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
 });
 
 const yearTarget = document.getElementById('year');
