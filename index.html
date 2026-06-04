@@ -3,108 +3,198 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Susan Shrestha | AI/ML Engineer</title>
+  <title>Susan Shrestha | Portfolio</title>
+  <meta name="description" content="Portfolio of Susan Shrestha - AI/ML Engineer building GraphRAG, multimodal AI, and production-ready intelligent systems.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="bg-glow bg-glow-1"></div>
-  <div class="bg-glow bg-glow-2"></div>
+  <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
 
-  <header class="hero wrapper">
-    <p class="eyebrow">AI/ML Engineer Portfolio</p>
-    <h1>Susan Shrestha</h1>
-    <p class="lead">
-      I design and build practical AI systems across GraphRAG, multimodal retrieval, federated learning,
-      and computer vision with a strong focus on deployable outcomes.
-    </p>
-    <div class="hero-links">
-      <a href="mailto:susanshrestha2056@gmail.com">susanshrestha2056@gmail.com</a>
-      <a href="https://linkedin.com/in/5usan" target="_blank" rel="noreferrer">LinkedIn</a>
-      <a href="https://github.com/5usan" target="_blank" rel="noreferrer">GitHub</a>
-    </div>
+  <header class="site-header">
+    <nav class="wrapper nav" aria-label="Primary navigation">
+      <a class="brand" href="#home">Susan</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div id="nav-links" class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
   </header>
 
-  <main class="wrapper grid">
-    <section class="panel">
-      <h2>What I Work On</h2>
-      <p>
-        Reviewing your repositories shows a clear evolution from full-stack web and mobile development into
-        applied AI/ML engineering. Your current work centers on LLM systems, graph-enhanced retrieval,
-        multimodal reasoning, and privacy-aware model training.
-      </p>
-      <div class="tags">
-        <span>GraphRAG</span>
-        <span>RAG Pipelines</span>
-        <span>Multimodal AI</span>
-        <span>Federated Learning</span>
-        <span>Computer Vision</span>
-        <span>MLOps Prototyping</span>
+  <main id="home">
+    <section class="hero wrapper reveal">
+      <p class="eyebrow">AI/ML Engineer • Software Developer</p>
+      <h1>Hi, I'm Susan Shrestha.</h1>
+      <p class="typing-line"><span class="sr-only">Building intelligent backend systems, data-driven products, and AI pipelines.</span><span id="typing-text" aria-hidden="true"></span></p>
+      <p class="lead">I build intelligent backend systems, multimodal retrieval pipelines, and production-ready AI workflows that move from research to real impact.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="mailto:susanshrestha2056@gmail.com" class="btn btn-secondary">Email Me</a>
+      </div>
+      <ul class="stats" aria-label="Portfolio statistics">
+        <li><strong>10+</strong><span>AI/ML Projects</span></li>
+        <li><strong>4</strong><span>Recent Roles</span></li>
+        <li><strong>6+</strong><span>Core Domains</span></li>
+      </ul>
+    </section>
+
+    <section id="about" class="wrapper section reveal">
+      <div class="section-heading">
+        <h2>About Me</h2>
+      </div>
+      <div class="about-grid panel">
+        <div>
+          <p>I'm an AI/ML engineer focused on graph-enhanced retrieval, LLM systems, and computer vision. I enjoy combining strong software engineering with practical research so models can deliver real-world outcomes.</p>
+          <p>My work spans GraphRAG, federated learning, multimodal retrieval, and deployment-ready APIs for intelligent applications.</p>
+        </div>
+        <img src="https://media.giphy.com/media/L1R1tvI9svkIWwpVYr/giphy.gif" alt="">
       </div>
     </section>
 
-    <section class="panel">
-      <h2>Selected GitHub Projects</h2>
-      <div class="cards">
-        <article>
+    <section class="wrapper section reveal">
+      <div class="section-heading">
+        <h2>Find Me Here</h2>
+      </div>
+      <div class="social-links panel">
+        <a href="https://www.linkedin.com/in/5usan" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="mailto:susanshrestha2056@gmail.com">Gmail</a>
+        <a href="https://github.com/5usan" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://medium.com/@susanshrestha2056" target="_blank" rel="noreferrer">Medium</a>
+        <a href="https://www.youtube.com/@5usan" target="_blank" rel="noreferrer">YouTube</a>
+        <a href="https://leetcode.com/u/5usan/" target="_blank" rel="noreferrer">LeetCode</a>
+      </div>
+    </section>
+
+    <section id="skills" class="wrapper section reveal">
+      <div class="section-heading">
+        <h2>Tech Stack</h2>
+      </div>
+      <div class="skills-grid">
+        <article class="panel">
+          <h3>Languages</h3>
+          <p>Python, JavaScript, SQL, C++, HTML/CSS</p>
+        </article>
+        <article class="panel">
+          <h3>AI · ML</h3>
+          <p>PyTorch, Scikit-learn, Transformers, Hugging Face, OpenCV, YOLO</p>
+        </article>
+        <article class="panel">
+          <h3>LLM Stack</h3>
+          <p>GraphRAG, RAG, LangChain/LangGraph, Fine-tuning, Prompt Engineering</p>
+        </article>
+        <article class="panel">
+          <h3>Data & Infra</h3>
+          <p>Neo4j, PostgreSQL, MongoDB, Redis, Docker, AWS, Linux</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="wrapper section reveal">
+      <div class="section-heading">
+        <h2>Selected Projects</h2>
+      </div>
+      <div class="projects-grid">
+        <article class="panel card">
           <h3><a href="https://github.com/5usan/GraphRAG" target="_blank" rel="noreferrer">GraphRAG</a></h3>
-          <p>Knowledge-graph augmented retrieval and reasoning workflows for LLM-based systems.</p>
+          <p>Knowledge-graph augmented retrieval and reasoning workflows for LLM-powered applications.</p>
         </article>
-        <article>
+        <article class="panel card">
           <h3><a href="https://github.com/5usan/Multimodal-RAG" target="_blank" rel="noreferrer">Multimodal-RAG</a></h3>
-          <p>Cross-modal retrieval and response generation that combines text and visual context.</p>
+          <p>Cross-modal retrieval and response generation combining text and visual context.</p>
         </article>
-        <article>
+        <article class="panel card">
           <h3><a href="https://github.com/5usan/Federated-LLM-Learning" target="_blank" rel="noreferrer">Federated-LLM-Learning</a></h3>
-          <p>Privacy-preserving LLM training approaches with federated optimization patterns.</p>
+          <p>Privacy-preserving LLM training patterns with federated optimization strategies.</p>
         </article>
-        <article>
+        <article class="panel card">
           <h3><a href="https://github.com/5usan/Face-Detection" target="_blank" rel="noreferrer">Face-Detection</a></h3>
-          <p>YOLO/OpenCV-based vision experiments focused on practical detection performance.</p>
+          <p>YOLO/OpenCV vision experiments focused on practical and efficient detection performance.</p>
         </article>
-        <article>
+        <article class="panel card">
           <h3><a href="https://github.com/5usan/Few-Shot-GNN-LLM" target="_blank" rel="noreferrer">Few-Shot-GNN-LLM</a></h3>
-          <p>Few-shot learning with graph structures and language models for low-data settings.</p>
+          <p>Few-shot learning with graph structures and language models for low-data scenarios.</p>
         </article>
-        <article>
+        <article class="panel card">
           <h3><a href="https://github.com/5usan/Graph-Augmentation-using-LLMs-for-Text-Attributed-GNNs" target="_blank" rel="noreferrer">Graph-Augmentation using LLMs</a></h3>
-          <p>Graph enhancement methods for text-attributed GNN tasks using LLM-generated signals.</p>
+          <p>LLM-assisted graph enhancement methods for text-attributed GNN tasks.</p>
         </article>
       </div>
     </section>
 
-    <section class="panel split">
-      <div>
-        <h2>Experience Highlights</h2>
-        <ul>
-          <li><strong>AI Developer — Wright State University:</strong> Built persona-consistent LLM chat systems and AI voice pipeline prototypes.</li>
-          <li><strong>Software Engineer — Vairav Technology:</strong> Built SOC automation and QR/LLM-integrated scam detection workflows.</li>
-          <li><strong>Graduate Research Assistant:</strong> Advanced GraphRAG and ontology-focused reasoning under KASTLE Lab.</li>
-          <li><strong>Graduate Teaching Assistant:</strong> Supported graduate Computer Science instruction and mentoring.</li>
-        </ul>
+    <section id="experience" class="wrapper section reveal">
+      <div class="section-heading">
+        <h2>Experience</h2>
       </div>
-      <div>
-        <h2>Core Skills</h2>
-        <ul>
-          <li><strong>Languages:</strong> Python, JavaScript, SQL, C++, HTML/CSS</li>
-          <li><strong>AI/ML:</strong> PyTorch, Scikit-learn, Transformers, Hugging Face, OpenCV, YOLO</li>
-          <li><strong>LLM Stack:</strong> GraphRAG, RAG, Fine-tuning, Llama, LangChain/LangGraph</li>
-          <li><strong>Data:</strong> Neo4j, PostgreSQL, MongoDB, Redis</li>
-          <li><strong>Systems:</strong> Docker, Linux, AWS, CI/CD, API design</li>
-        </ul>
+      <div class="timeline">
+        <article class="panel">
+          <h3>AI Developer — Wright State University</h3>
+          <p>Built persona-consistent LLM chat systems and AI voice pipeline prototypes.</p>
+        </article>
+        <article class="panel">
+          <h3>Software Engineer — Vairav Technology</h3>
+          <p>Built SOC automation and QR/LLM-integrated scam detection workflows.</p>
+        </article>
+        <article class="panel">
+          <h3>Graduate Research Assistant</h3>
+          <p>Advanced GraphRAG and ontology-focused reasoning under KASTLE Lab.</p>
+        </article>
+        <article class="panel">
+          <h3>Graduate Teaching Assistant</h3>
+          <p>Supported graduate Computer Science instruction and mentoring.</p>
+        </article>
       </div>
     </section>
 
-    <section class="panel resume">
-      <h2>Resume</h2>
-      <p>Preview and open the complete resume below.</p>
-      <a class="resume-link" href="https://github.com/user-attachments/assets/5f5ab692-e5ba-46a8-98ff-2476e36bff5d" target="_blank" rel="noreferrer">
-        Open full resume
-      </a>
-      <img src="https://github.com/user-attachments/assets/5f5ab692-e5ba-46a8-98ff-2476e36bff5d" alt="Susan Shrestha resume">
+    <section class="wrapper section reveal">
+      <div class="section-heading">
+        <h2>GitHub Stats</h2>
+      </div>
+      <div class="panel stats-embed">
+        <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=5usan&theme=2077" alt="GitHub statistics card">
+        <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=5usan&theme=2077" alt="Top languages card">
+        <img src="https://github-readme-streak-stats.herokuapp.com/?user=5usan&hide_border=true&background=050816&ring=7aa2ff&fire=34d399&currStreakLabel=7aa2ff" alt="GitHub streak stats">
+        <img src="https://github-readme-activity-graph.vercel.app/graph?username=5usan&bg_color=050816&color=7aa2ff&line=34d399&point=e6ebff&area=true&hide_border=true" alt="GitHub activity graph">
+      </div>
+    </section>
+
+    <section class="wrapper section reveal">
+      <div class="section-heading">
+        <h2>Contribution Snake</h2>
+      </div>
+      <div class="panel snake-wrap">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/5usan/5usan/output/github-contribution-grid-snake-dark.svg">
+          <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/5usan/5usan/output/github-contribution-grid-snake.svg">
+          <img src="https://raw.githubusercontent.com/5usan/5usan/output/github-contribution-grid-snake-dark.svg" alt="Contribution snake animation">
+        </picture>
+      </div>
+    </section>
+
+    <section id="contact" class="wrapper section reveal">
+      <div class="panel contact-panel">
+        <h2>Let's Build Something Impactful</h2>
+        <p>Open to AI/ML engineering, research, and product-focused collaborations.</p>
+        <div class="hero-actions">
+          <a href="mailto:susanshrestha2056@gmail.com" class="btn btn-primary">Get in touch</a>
+          <a href="https://github.com/user-attachments/assets/5f5ab692-e5ba-46a8-98ff-2476e36bff5d" target="_blank" rel="noreferrer" class="btn btn-secondary">View Resume</a>
+        </div>
+      </div>
     </section>
   </main>
+
+  <footer class="wrapper footer">
+    <img src="https://komarev.com/ghpvc/?username=5usan&style=for-the-badge&color=7aa2ff&labelColor=050816&label=PROFILE+VIEWS" alt="GitHub profile view counter badge">
+    <p>© <span id="year"></span> Susan Shrestha</p>
+  </footer>
+
+  <button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top">↑</button>
+  <script src="script.js"></script>
 </body>
 </html>
