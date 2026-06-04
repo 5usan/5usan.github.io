@@ -6,6 +6,9 @@ const phrases = [
 ];
 
 const typingTarget = document.getElementById('typing-text');
+const TYPING_SPEED_ADD = 70;
+const TYPING_SPEED_DELETE = 40;
+const REVEAL_THRESHOLD = 0.16;
 let phraseIndex = 0;
 let charIndex = 0;
 let deleting = false;
@@ -31,7 +34,7 @@ function type() {
     }
   }
 
-  setTimeout(type, deleting ? 40 : 70);
+  setTimeout(type, deleting ? TYPING_SPEED_DELETE : TYPING_SPEED_ADD);
 }
 
 type();
@@ -43,7 +46,8 @@ const observer = new IntersectionObserver((entries) => {
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.16 });
+// Trigger slightly before full visibility so animations feel responsive while scrolling.
+}, { threshold: REVEAL_THRESHOLD });
 
 document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
 
