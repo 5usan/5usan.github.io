@@ -1,0 +1,76 @@
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f7f7fb;
+  color: #1f2430;
+  line-height: 1.6;
+}
+
+.hero,
+.content {
+  width: min(900px, 92vw);
+  margin: 0 auto;
+}
+
+.hero {
+  padding: 4.5rem 0 2rem;
+}
+
+.hero h1 {
+  margin: 0.4rem 0 1rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.2;
+}
+
+.kicker {
+  margin: 0;
+  font-weight: 600;
+  color: #4f46e5;
+}
+
+.content {
+  padding-bottom: 4rem;
+}
+
+section {
+  margin-top: 2.5rem;
+}
+
+h2 {
+  margin-bottom: 0.75rem;
+  font-size: 1.4rem;
+}
+
+.cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e9e9f2;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 8px 20px rgba(31, 36, 48, 0.04);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+a {
+  color: #4338ca;
+}
+
+a:hover {
+  color: #312e81;
+}
