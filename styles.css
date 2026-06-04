@@ -376,4 +376,10 @@ h1 {
   .back-to-top {
     transition: none;
   }
+
+  .btn,
+  .social-links a,
+  .nav-links a {
+    transition: none;
+  }
 }

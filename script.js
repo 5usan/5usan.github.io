@@ -8,7 +8,7 @@ const phrases = [
 const typingTarget = document.getElementById('typing-text');
 const TYPING_DELAY_MS = 70;
 const DELETE_DELAY_MS = 40;
-// Balanced to reveal cards shortly after entering viewport while avoiding early off-screen triggering.
+// 0.16 means ~16% visibility; chosen to feel responsive without triggering too early off-screen.
 const REVEAL_THRESHOLD = 0.16;
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 let phraseIndex = 0;
