@@ -8,7 +8,7 @@ const phrases = [
 const typingTarget = document.getElementById('typing-text');
 const TYPING_DELAY_MS = 70;
 const DELETE_DELAY_MS = 40;
-// 0.16 means ~16% visibility; chosen to feel responsive without triggering too early off-screen.
+// 0.16 (~16% visibility) was chosen via visual tuning for balanced reveal timing on desktop and mobile.
 const REVEAL_THRESHOLD = 0.16;
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 let phraseIndex = 0;
