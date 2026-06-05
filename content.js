@@ -58,8 +58,8 @@ FILES['README.md'] = {
   name: 'README.md', path: 'portfolio/README.md', icon: 'md', iconClass: 'ic-md',
   lang: 'Markdown', render: 'md', git: 'M',
   body: `
-  <div class="hero">
-    <div class="htext">
+  <div class="intro">
+    <div class="intro-main">
       <h1>Hi, I'm Susan Shrestha <span style="font-size:26px">👋</span></h1>
       <div class="subtitle">// AI / ML Researcher · M.S. Computer Science</div>
       <p class="lede">I build <strong>knowledge-grounded AI</strong> — systems where large language models retrieve from
@@ -70,14 +70,13 @@ FILES['README.md'] = {
         <span class="chip accent">Knowledge Graphs</span>
         <span class="chip accent">LLM Fine-Tuning</span>
       </div>
+      <div class="meta-row">
+        <span class="mi">${ICONS.pin} Fairborn, Ohio</span>
+        <span class="mi">${ICONS.account} Wright State University · KASTLE Lab</span>
+        <span class="mi">${ICONS.git} github.com/5usan</span>
+      </div>
     </div>
-    <div class="avatar"><span>[ drop&nbsp;your&nbsp;photo&nbsp;here ]<br>132 × 132</span></div>
-  </div>
-
-  <div class="meta-row">
-    <span class="mi">${ICONS.pin} Fairborn, Ohio</span>
-    <span class="mi">${ICONS.account} Wright State University · KASTLE Lab</span>
-    <span class="mi">${ICONS.git} github.com/5usan</span>
+    <div class="avatar avatar-tall"><img src="assets/profile_tall.png" alt="Susan Shrestha" loading="eager"></div>
   </div>
 
   <h2>About</h2>
