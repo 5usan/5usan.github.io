@@ -154,6 +154,73 @@ html[data-theme="monokai"] {
   --md-code-bg: #1e1f1c;
 }
 
+/* ---------- Light+ (default light) ---------- */
+html[data-theme="light"] {
+  /* chrome */
+  --titlebar: #dcdcdc;
+  --titlebar-text: #333333;
+  --activitybar: #f3f3f3;
+  --activitybar-fg: #616161;
+  --activitybar-fg-active: #1f1f1f;
+  --activitybar-active-border: #007acc;
+  --sidebar: #f3f3f3;
+  --sidebar-fg: #3b3b3b;
+  --sidebar-section: #6f6f6f;
+  --editor: #ffffff;
+  --editor-fg: #1f1f1f;
+  --tabs-bg: #ececec;
+  --tab-inactive: #ececec;
+  --tab-active: #ffffff;
+  --tab-fg: #5f5f5f;
+  --tab-active-fg: #1f1f1f;
+  --tab-top-border: #007acc;
+  --breadcrumb-fg: #6b6b6b;
+  --panel-bg: #ffffff;
+  --panel-tab-fg: #5f5f5f;
+  --panel-tab-active: #1f1f1f;
+  --statusbar: #007acc;
+  --statusbar-fg: #ffffff;
+  --statusbar-noopen: #68217a;
+  --border: #e0e0e0;
+  --border-strong: #c8c8c8;
+  --accent: #007acc;
+  --accent-hover: #005a9e;
+  --selection: #add6ff;
+  --list-hover: #e8e8e8;
+  --list-active: #d6ebff;
+  --scrollbar: #c1c1c1;
+  --gutter-fg: #237893;
+  --link: #006ab1;
+
+  /* syntax */
+  --tok-key: #0000ff;
+  --tok-key2: #af00db;
+  --tok-str: #a31515;
+  --tok-num: #098658;
+  --tok-com: #008000;
+  --tok-fn: #795e26;
+  --tok-type: #267f99;
+  --tok-prop: #001080;
+  --tok-const: #0070c1;
+  --tok-punc: #383a42;
+  --tok-tag: #800000;
+  --tok-attr: #e50000;
+
+  /* markdown */
+  --md-h: #1f2328;
+  --md-accent: #006ab1;
+  --md-quote-bar: #007acc;
+  --md-code-bg: #f0f0f0;
+}
+/* light-theme contrast fixes for hardcoded grays/greens */
+html[data-theme="light"] .md-view .lede,
+html[data-theme="light"] .pub .pub-authors { color: #4a5159; }
+html[data-theme="light"] .md-view blockquote { color: #57606a; background: rgba(0,0,0,.035); }
+html[data-theme="light"] .term-dim { color: #6e7681; }
+html[data-theme="light"] .term-green,
+html[data-theme="light"] .term-prompt .ps1 { color: #1a7f37; }
+html[data-theme="light"] .term-cursor { background: var(--editor-fg); }
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 html, body { height: 100%; }
@@ -431,14 +498,8 @@ body {
 /* hero in README */
 .hero { display: flex; gap: 26px; align-items: flex-start; margin-bottom: 4px; flex-wrap: wrap; }
 .hero .htext { flex: 1 1 260px; min-width: 0; }
-
-/* intro block — photo stretches down past the meta row */
-.intro { display: flex; gap: 26px; align-items: stretch; flex-wrap: wrap; margin-bottom: 6px; }
-.intro-main { flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; }
-.intro-main .meta-row { margin-top: auto; margin-bottom: 2px; }
-.avatar.avatar-tall { flex: 0 0 190px; height: auto; min-height: 250px; align-self: stretch; }
 .avatar {
-  flex: 0 0 152px; height: 152px; border-radius: 10px; overflow: hidden;
+  flex: 0 0 132px; height: 132px; border-radius: 10px; overflow: hidden;
   border: 1px solid var(--border);
   background: var(--md-code-bg);
   position: relative;
@@ -494,6 +555,36 @@ body {
 .contact-card .cmeta b { display:block; color: var(--md-h); font-size:13.5px; }
 .contact-card .cmeta span { font-family: var(--mono); font-size: 12px; color: #9a9a9a; }
 
+/* publications */
+.pub {
+  border: 1px solid var(--border); border-radius: 8px; padding: 16px 18px; margin: 16px 0;
+  background: var(--md-code-bg); transition: border-color .15s, transform .15s;
+}
+.pub:hover { border-color: var(--accent); transform: translateY(-2px); }
+.pub .pub-venue { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: .6px; color: var(--accent-hover); }
+.pub .pub-title { font-size: 16.5px; color: var(--md-h); font-weight: 600; margin: 7px 0 6px; line-height: 1.35; }
+.pub .pub-authors { font-size: 13.5px; color: #c9c9c9; }
+.pub .pub-authors strong { color: var(--accent-hover); }
+.pub .pub-meta { font-family: var(--mono); font-size: 12px; color: #8a8a8a; margin-top: 4px; }
+.pub .pub-links { display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+
+/* certifications */
+.cert-grid { display: flex; flex-direction: column; gap: 12px; margin: 18px 0; }
+.cert-card {
+  display: flex; align-items: center; gap: 14px; padding: 14px 16px;
+  border: 1px solid var(--border); border-radius: 8px; background: var(--md-code-bg);
+  transition: border-color .15s, transform .15s;
+}
+.cert-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.cert-card .cert-ic { width: 36px; height: 36px; flex: 0 0 36px; display:flex; align-items:center; justify-content:center; border-radius:8px; background: rgba(127,127,127,.12); }
+.cert-card .cert-ic svg { width: 20px; height: 20px; color: var(--accent-hover); }
+.cert-card .cert-meta { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+.cert-card .cert-meta b { color: var(--md-h); font-size: 14px; }
+.cert-card .cert-issuer { font-family: var(--mono); font-size: 12px; color: #9a9a9a; }
+.cert-card .cert-id { font-family: var(--mono); font-size: 11px; color: #6f6f6f; }
+.cert-card .cert-verify { margin-left: auto; font-family: var(--mono); font-size: 12px; color: var(--link); white-space: nowrap; }
+.cert-card:hover .cert-verify { text-decoration: underline; }
+
 /* ============================================================
    Panel (terminal)
    ============================================================ */
@@ -502,7 +593,28 @@ body {
   background: var(--panel-bg);
   display: flex; flex-direction: column;
   width: clamp(300px, 32%, 440px); flex: 0 0 auto; min-width: 0;
+  position: relative;
 }
+/* drag-to-resize handle on the panel's left edge */
+.panel-resizer {
+  position: absolute; top: 0; bottom: 0; left: 0; width: 12px;
+  transform: translateX(-6px);
+  cursor: col-resize; z-index: 12;
+}
+.panel-resizer::after {
+  content: ""; position: absolute; top: 0; bottom: 0; left: 6px; width: 1px;
+  background: var(--border-strong); transition: background .12s, width .12s, left .12s;
+}
+/* subtle grip dots so the handle is discoverable */
+.panel-resizer::before {
+  content: ""; position: absolute; top: 50%; left: 4px;
+  width: 4px; height: 26px; transform: translateY(-50%);
+  background-image: radial-gradient(currentColor 1px, transparent 1px);
+  background-size: 4px 6px; color: #8a8a8a; opacity: .55;
+  transition: opacity .12s; pointer-events: none;
+}
+.panel-resizer:hover::after, body.resizing-panel .panel-resizer::after { background: var(--accent); width: 2px; left: 5px; }
+.panel-resizer:hover::before, body.resizing-panel .panel-resizer::before { opacity: .9; color: var(--accent); }
 .panel.collapsed { display: none; }
 .panel-tabs {
   display: flex; align-items: center; gap: 18px; padding: 6px 16px 0;

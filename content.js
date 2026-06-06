@@ -39,6 +39,9 @@ const ICONS = {
   linkedin: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.5 3.5A2 2 0 104.5 7.5 2 2 0 004.5 3.5zM3 9h3v12H3zM9 9h2.9v1.6h.04c.4-.76 1.4-1.6 2.9-1.6 3.1 0 3.7 2 3.7 4.7V21h-3v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9V21H9z"/></svg>',
   github: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0012 2z"/></svg>',
   copy: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 012-2h8"/></svg>',
+  award: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="9" r="6"/><path d="M8.5 13.5L7 21l5-3 5 3-1.5-7.5"/></svg>',
+  book: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5a2 2 0 012-2h13v15H6a2 2 0 00-2 2z"/><path d="M4 18.5A2 2 0 016 17h13"/></svg>',
+  link: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 15l6-6M10.5 6.5l1-1a4 4 0 015.7 5.7l-1 1M13.5 17.5l-1 1a4 4 0 01-5.7-5.7l1-1"/></svg>',
 };
 
 /* ---------- helpers for code highlighting ---------- */
@@ -58,8 +61,8 @@ FILES['README.md'] = {
   name: 'README.md', path: 'portfolio/README.md', icon: 'md', iconClass: 'ic-md',
   lang: 'Markdown', render: 'md', git: 'M',
   body: `
-  <div class="intro">
-    <div class="intro-main">
+  <div class="hero">
+    <div class="htext">
       <h1>Hi, I'm Susan Shrestha <span style="font-size:26px">👋</span></h1>
       <div class="subtitle">// AI / ML Researcher · M.S. Computer Science</div>
       <p class="lede">I build <strong>knowledge-grounded AI</strong> — systems where large language models retrieve from
@@ -70,13 +73,14 @@ FILES['README.md'] = {
         <span class="chip accent">Knowledge Graphs</span>
         <span class="chip accent">LLM Fine-Tuning</span>
       </div>
-      <div class="meta-row">
-        <span class="mi">${ICONS.pin} Fairborn, Ohio</span>
-        <span class="mi">${ICONS.account} Wright State University · KASTLE Lab</span>
-        <span class="mi">${ICONS.git} github.com/5usan</span>
-      </div>
     </div>
-    <div class="avatar avatar-tall"><img src="assets/profile_tall.png" alt="Susan Shrestha" loading="eager"></div>
+    <div class="avatar"><img src="assets/profile_sq.png" alt="Susan Shrestha" loading="eager"></div>
+  </div>
+
+  <div class="meta-row">
+    <span class="mi">${ICONS.pin} Fairborn, Ohio</span>
+    <span class="mi">${ICONS.account} Wright State University · KASTLE Lab</span>
+    <span class="mi">${ICONS.git} github.com/5usan</span>
   </div>
 
   <h2>About</h2>
@@ -99,10 +103,11 @@ FILES['README.md'] = {
   <code>⌘P</code> to jump anywhere, or pop open the <strong>terminal</strong> below and type <code>help</code>.</p>
   <ul>
     <li><code>projects/</code> — research & engineering projects, one file each</li>
-    <li><code>experience/research.md</code> + <code>work.json</code> — where I've worked</li>
-    <li><code>skills.ts</code> — the stack, as a typed object</li>
-    <li><code>education.json</code> — degrees</li>
-    <li><code>contact.md</code> — let's talk</li>
+    <li><code>experience/</code> — research &amp; work history</li>
+    <li><code>publications/</code> — peer-reviewed research</li>
+    <li><code>skills/</code> — the stack, as a typed object</li>
+    <li><code>education/</code> — degrees · <code>certifications/</code> — verified credentials</li>
+    <li><code>contact/</code> — let's talk</li>
   </ul>
 
   <blockquote>"Grounding generative AI in structured knowledge — making the black box auditable, one ontology at a time."</blockquote>
@@ -169,13 +174,13 @@ FILES['multimodal-rag.md'] = {
   `
 };
 
-/* ---------- projects/roal-ontology.md ---------- */
-FILES['roal-ontology.md'] = {
-  name: 'roal-ontology.md', path: 'portfolio/projects/roal-ontology.md', icon: 'md', iconClass: 'ic-md',
+/* ---------- projects/arom-ontology.md ---------- */
+FILES['arom-ontology.md'] = {
+  name: 'arom-ontology.md', path: 'portfolio/projects/arom-ontology.md', icon: 'md', iconClass: 'ic-md',
   lang: 'Markdown', render: 'md', git: 'U',
   body: `
-  <div class="proj-head"><h1 style="margin-bottom:0">ROAL Ontology</h1><span class="year">Fall 2025</span></div>
-  <div class="subtitle">// Robotic Orchestration and Learning Ontology</div>
+  <div class="proj-head"><h1 style="margin-bottom:0">AROM Ontology</h1><span class="year">Fall 2025</span></div>
+  <div class="subtitle">// Autonomous Robotic Orchestration Modular Ontology</div>
   <div class="chips">
     <span class="chip">OWL</span><span class="chip">Protégé</span><span class="chip">SPARQL</span>
     <span class="chip">RDFLib</span><span class="chip">yEd</span>
@@ -214,9 +219,9 @@ FILES['federated-llm.md'] = {
   `
 };
 
-/* ---------- projects/yolo-detection.md ---------- */
-FILES['yolo-detection.md'] = {
-  name: 'yolo-detection.md', path: 'portfolio/projects/yolo-detection.md', icon: 'md', iconClass: 'ic-md',
+/* ---------- projects/face-detection.md ---------- */
+FILES['face-detection.md'] = {
+  name: 'face-detection.md', path: 'portfolio/projects/face-detection.md', icon: 'md', iconClass: 'ic-md',
   lang: 'Markdown', render: 'md', git: 'U',
   body: `
   <div class="proj-head"><h1 style="margin-bottom:0">Face &amp; Person Detection</h1><span class="year">Fall 2024</span></div>
@@ -307,7 +312,7 @@ FILES['work.json'] = {
 
 /* ---------- education.json ---------- */
 FILES['education.json'] = {
-  name: 'education.json', path: 'portfolio/education.json', icon: 'json', iconClass: 'ic-json',
+  name: 'education.json', path: 'portfolio/education/education.json', icon: 'json', iconClass: 'ic-json',
   lang: 'JSON', render: 'code', git: '', lines: 22,
   body: `<span class="pu">{</span>
   <span class="p">"degrees"</span><span class="pu">:</span> <span class="pu">[</span>
@@ -332,7 +337,7 @@ FILES['education.json'] = {
 
 /* ---------- skills.ts ---------- */
 FILES['skills.ts'] = {
-  name: 'skills.ts', path: 'portfolio/skills.ts', icon: 'ts', iconClass: 'ic-ts',
+  name: 'skills.ts', path: 'portfolio/skills/skills.ts', icon: 'ts', iconClass: 'ic-ts',
   lang: 'TypeScript', render: 'code', git: '', lines: 42,
   body: `<span class="c">// The stack, as a typed object. Hover-worthy.</span>
 <span class="k">export const</span> <span class="cn">skills</span><span class="pu">:</span> <span class="t">SkillSet</span> <span class="pu">=</span> <span class="pu">{</span>
@@ -365,7 +370,7 @@ FILES['skills.ts'] = {
 
 /* ---------- contact.md ---------- */
 FILES['contact.md'] = {
-  name: 'contact.md', path: 'portfolio/contact.md', icon: 'md', iconClass: 'ic-md',
+  name: 'contact.md', path: 'portfolio/contact/contact.md', icon: 'md', iconClass: 'ic-md',
   lang: 'Markdown', render: 'md', git: '',
   body: `
   <h1>Let's build something grounded 🤝</h1>
@@ -397,6 +402,80 @@ FILES['contact.md'] = {
   `
 };
 
+/* ---------- publications.md ---------- */
+FILES['publications.md'] = {
+  name: 'publications.md', path: 'portfolio/publications/publications.md', icon: 'md', iconClass: 'ic-md',
+  lang: 'Markdown', render: 'md', git: 'U',
+  body: `
+  <h1>Publications <span style="font-size:24px">📚</span></h1>
+  <div class="subtitle">// Peer-reviewed research</div>
+  <p class="lede">Peer-reviewed work at the intersection of <strong>ontologies</strong>, <strong>knowledge graphs</strong>,
+  and applied AI. The complete, always-current list lives on
+  <a href="https://scholar.google.com/citations?user=Px7ia3IAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar ↗</a>.</p>
+
+  <div class="pub">
+    <div class="pub-venue">RobOntics 2025 · Workshop on Ontologies for Autonomous Robotics · @ROBOTICC</div>
+    <div class="pub-title">Towards a Modular Ontology for Autonomous Robotic Orchestration</div>
+    <div class="pub-authors">Michael McCain · Chris Davis Jaldi · <strong>Susan Shrestha</strong> · Shreyas Casturi · Cogan Shimizu</div>
+    <div class="pub-meta">CEUR-WS, Vol-4169 · 2025 · Peer-reviewed workshop paper</div>
+    <p>Introduces <strong>AROM</strong> — a modular ontology that gives autonomous, multi-agent robotic systems a shared,
+    machine-interpretable vocabulary for reasoning over tasks, capabilities, and goals. Built on a library of ontological
+    design patterns and grounded in real robotic datasets. See the
+    <span class="term-link" data-open="arom-ontology.md" style="cursor:pointer;color:var(--link)">arom-ontology.md</span> project for the build.</p>
+    <div class="pub-links">
+      <a class="repo-link" href="https://ceur-ws.org/Vol-4169/" target="_blank" rel="noopener">${ICONS.link} CEUR-WS Vol-4169 <span class="arrow">↗</span></a>
+      <a class="repo-link" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Px7ia3IAAAAJ&citation_for_view=Px7ia3IAAAAJ:u5HHmVD_uO8C" target="_blank" rel="noopener">${ICONS.book} Google Scholar <span class="arrow">↗</span></a>
+    </div>
+  </div>
+
+  <blockquote>Want the BibTeX or a PDF? Reach out via <span class="term-link" data-open="contact.md" style="cursor:pointer;color:var(--link)">contact.md</span> — happy to share.</blockquote>
+  `
+};
+
+/* ---------- certifications.md ---------- */
+FILES['certifications.md'] = {
+  name: 'certifications.md', path: 'portfolio/certifications/certifications.md', icon: 'md', iconClass: 'ic-md',
+  lang: 'Markdown', render: 'md', git: 'U',
+  body: `
+  <h1>Certifications <span style="font-size:24px">🏅</span></h1>
+  <div class="subtitle">// Verified credentials · Coursera</div>
+  <p class="lede">Professional certificates earned through <strong>Coursera</strong>. Each card links to its public
+  verification page — click <em>Verify</em> to confirm authenticity.</p>
+
+  <div class="cert-grid">
+    <a class="cert-card" href="https://www.coursera.org/account/accomplishments/verify/NSDPTTVPMQ2F" target="_blank" rel="noopener">
+      <span class="cert-ic">${ICONS.award}</span>
+      <span class="cert-meta">
+        <b>Coursera Professional Certificate</b>
+        <span class="cert-issuer">Coursera · Verified credential</span>
+        <span class="cert-id">ID&nbsp;NSDPTTVPMQ2F</span>
+      </span>
+      <span class="cert-verify">Verify ↗</span>
+    </a>
+    <a class="cert-card" href="https://www.coursera.org/account/accomplishments/verify/UES271K1B01Q" target="_blank" rel="noopener">
+      <span class="cert-ic">${ICONS.award}</span>
+      <span class="cert-meta">
+        <b>Coursera Professional Certificate</b>
+        <span class="cert-issuer">Coursera · Verified credential</span>
+        <span class="cert-id">ID&nbsp;UES271K1B01Q</span>
+      </span>
+      <span class="cert-verify">Verify ↗</span>
+    </a>
+    <a class="cert-card" href="https://www.coursera.org/account/accomplishments/verify/J4PJD43F0PPN" target="_blank" rel="noopener">
+      <span class="cert-ic">${ICONS.award}</span>
+      <span class="cert-meta">
+        <b>Coursera Professional Certificate</b>
+        <span class="cert-issuer">Coursera · Verified credential</span>
+        <span class="cert-id">ID&nbsp;J4PJD43F0PPN</span>
+      </span>
+      <span class="cert-verify">Verify ↗</span>
+    </a>
+  </div>
+
+  <blockquote>📝 Titles shown are placeholders — send the exact course names &amp; issuing partners and I'll swap them in.</blockquote>
+  `
+};
+
 /* ---------- .gitignore (easter egg) ---------- */
 FILES['.gitignore'] = {
   name: '.gitignore', path: 'portfolio/.gitignore', icon: 'gitfile', iconClass: 'ic-git',
@@ -419,19 +498,31 @@ FILES['.gitignore'] = {
    ============================================================ */
 const TREE = [
   { type: 'file', id: 'README.md' },
-  { type: 'folder', name: 'projects', open: true, children: [
+  { type: 'folder', name: 'projects', open: false, children: [
     { type: 'file', id: 'graphrag.md' },
     { type: 'file', id: 'multimodal-rag.md' },
-    { type: 'file', id: 'roal-ontology.md' },
+    { type: 'file', id: 'arom-ontology.md' },
     { type: 'file', id: 'federated-llm.md' },
-    { type: 'file', id: 'yolo-detection.md' },
+    { type: 'file', id: 'face-detection.md' },
   ]},
-  { type: 'folder', name: 'experience', open: true, children: [
+  { type: 'folder', name: 'experience', open: false, children: [
     { type: 'file', id: 'research.md' },
     { type: 'file', id: 'work.json' },
   ]},
-  { type: 'file', id: 'education.json' },
-  { type: 'file', id: 'skills.ts' },
-  { type: 'file', id: 'contact.md' },
+  { type: 'folder', name: 'publications', open: false, children: [
+    { type: 'file', id: 'publications.md' },
+  ]},
+  { type: 'folder', name: 'education', open: false, children: [
+    { type: 'file', id: 'education.json' },
+  ]},
+  { type: 'folder', name: 'certifications', open: false, children: [
+    { type: 'file', id: 'certifications.md' },
+  ]},
+  { type: 'folder', name: 'skills', open: false, children: [
+    { type: 'file', id: 'skills.ts' },
+  ]},
+  { type: 'folder', name: 'contact', open: false, children: [
+    { type: 'file', id: 'contact.md' },
+  ]},
   { type: 'file', id: '.gitignore' },
 ];

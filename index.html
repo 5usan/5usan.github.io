@@ -4,6 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Susan Shrestha — Portfolio</title>
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('ss-theme');
+      var t = saved || ((window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark');
+      document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -84,6 +93,7 @@
 
         <!-- panel / terminal -->
         <div class="panel" id="panel">
+          <div class="panel-resizer" id="panel-resizer" title="Drag to resize"></div>
           <div class="panel-tabs">
             <span class="panel-tab" data-panel="problems">Problems</span>
             <span class="panel-tab" data-panel="output">Output</span>

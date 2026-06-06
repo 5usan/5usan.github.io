@@ -11,18 +11,22 @@
     openTabs: [],           // array of file ids
     active: null,           // active file id
     selectedTree: null,
-    theme: localStorage.getItem('ss-theme') || 'dark',
+    theme: localStorage.getItem('ss-theme') || systemTheme(),
     panelOpen: true,
     previewTab: null,       // single-click preview tab (italic)
   };
 
-  const THEME_LABEL = { dark: 'Dark+ (default dark)', onedark: 'One Dark Pro', monokai: 'Monokai' };
-  const THEME_ORDER = ['dark', 'onedark', 'monokai'];
+  const THEME_LABEL = { light: 'Light+ (default light)', dark: 'Dark+ (default dark)', onedark: 'One Dark Pro', monokai: 'Monokai' };
+  const THEME_ORDER = ['light', 'dark', 'onedark', 'monokai'];
 
-  function applyTheme(t) {
+  function systemTheme() {
+    return (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark';
+  }
+
+  function applyTheme(t, persist = true) {
     state.theme = t;
     document.documentElement.setAttribute('data-theme', t);
-    localStorage.setItem('ss-theme', t);
+    if (persist) localStorage.setItem('ss-theme', t);
     const lbl = $('#sb-theme-label');
     if (lbl) lbl.textContent = THEME_LABEL[t];
   }
@@ -157,6 +161,10 @@
            <div class="code-body">${f.body}</div>
          </div>`;
     }
+    // make in-document file links (data-open) open files in the editor
+    host.querySelectorAll('[data-open]').forEach(el => {
+      el.addEventListener('click', () => openFile(el.dataset.open, true));
+    });
   }
 
   function renderStatus() {
@@ -192,6 +200,7 @@
     if (isCmd) {
       const cmds = [
         { label: 'Change Color Theme', sub: '⌘K ⌘T', action: cycleTheme, icon: 'settings' },
+        { label: 'Theme: Light+ (default light)', sub: 'theme', action: () => applyTheme('light'), icon: 'settings' },
         { label: 'Theme: Dark+ (default dark)', sub: 'theme', action: () => applyTheme('dark'), icon: 'settings' },
         { label: 'Theme: One Dark Pro', sub: 'theme', action: () => applyTheme('onedark'), icon: 'settings' },
         { label: 'Theme: Monokai', sub: 'theme', action: () => applyTheme('monokai'), icon: 'settings' },
@@ -280,12 +289,14 @@
     ['help', 'show this list'],
     ['about', 'who is Susan?'],
     ['projects', 'list research & engineering projects'],
+    ['publications', 'peer-reviewed research'],
     ['skills', 'print the tech stack'],
     ['experience', 'work history'],
     ['education', 'degrees'],
+    ['certs', 'verified certifications'],
     ['contact / email', 'how to reach me'],
     ['open <file>', 'open a file in the editor'],
-    ['theme <name>', 'dark · onedark · monokai'],
+    ['theme <name>', 'light · dark · onedark · monokai'],
     ['hire-me', '🎉 the important one'],
     ['sudo', 'try it'],
     ['clear', 'clear the terminal'],
@@ -323,8 +334,23 @@
         termWrite(`Type <span class="term-yellow">open README.md</span> for the full story.`);
         break;
       case 'projects': case 'ls':
-        ['graphrag.md','multimodal-rag.md','roal-ontology.md','federated-llm.md','yolo-detection.md'].forEach(id =>
+        ['graphrag.md','multimodal-rag.md','arom-ontology.md','federated-llm.md','face-detection.md'].forEach(id =>
           termWrite(`  <span class="term-cyan">📄</span> <span class="term-link" data-open="${id}">${id}</span>`));
+        bindTermLinks();
+        break;
+      case 'publications': case 'pubs': case 'papers':
+        termWrite(`<span class="term-cyan">Peer-reviewed research:</span>`);
+        termWrite(`  <span class="term-yellow">Towards a Modular Ontology for Autonomous Robotic Orchestration</span>`);
+        termWrite(`  <span class="term-dim">McCain, Davis Jaldi, <span class="term-accent">Shrestha</span>, Casturi, Shimizu · RobOntics 2025 · CEUR-WS Vol-4169</span>`);
+        termWrite(`<span class="term-dim">→ open </span><span class="term-link" data-open="publications.md">publications.md</span><span class="term-dim"> · full list on </span><a class="term-link" href="https://scholar.google.com/citations?user=Px7ia3IAAAAJ&hl=en" target="_blank">Google Scholar ↗</a>`);
+        bindTermLinks();
+        break;
+      case 'certs': case 'certifications': case 'cert':
+        termWrite(`<span class="term-cyan">Verified certifications</span> <span class="term-dim">(Coursera):</span>`);
+        termWrite(`  <span class="term-yellow">●</span> Professional Certificate <span class="term-dim">· verify NSDPTTVPMQ2F</span>`);
+        termWrite(`  <span class="term-yellow">●</span> Professional Certificate <span class="term-dim">· verify UES271K1B01Q</span>`);
+        termWrite(`  <span class="term-yellow">●</span> Professional Certificate <span class="term-dim">· verify J4PJD43F0PPN</span>`);
+        termWrite(`<span class="term-dim">→ open </span><span class="term-link" data-open="certifications.md">certifications.md</span>`);
         bindTermLinks();
         break;
       case 'skills':
@@ -358,8 +384,8 @@
         break;
       }
       case 'theme': {
-        if (['dark','onedark','monokai'].includes(arg)) { applyTheme(arg); termWrite(`<span class="term-green">✓</span> theme → ${THEME_LABEL[arg]}`); }
-        else termWrite(`<span class="term-dim">usage: theme [dark | onedark | monokai]</span>`);
+        if (['light','dark','onedark','monokai'].includes(arg)) { applyTheme(arg); termWrite(`<span class="term-green">✓</span> theme → ${THEME_LABEL[arg]}`); }
+        else termWrite(`<span class="term-dim">usage: theme [light | dark | onedark | monokai]</span>`);
         break;
       }
       case 'hire-me': case 'hireme':
@@ -416,6 +442,64 @@
     if (state.panelOpen) setTimeout(() => $('#term-input').focus(), 0);
   }
 
+  /* ---------- drag-to-resize the terminal panel ---------- */
+  function setupPanelResizer() {
+    const resizer = $('#panel-resizer');
+    const panel = $('#panel');
+    const split = $('.editor-panel-split');
+    if (!resizer || !panel || !split) return;
+
+    const MIN = 240;                 // never thinner than this
+    const EDITOR_MIN = 320;          // always leave this much for the editor
+
+    // restore saved width
+    const saved = parseInt(localStorage.getItem('ss-panel-w') || '', 10);
+    if (saved) panel.style.width = clampPanel(saved) + 'px';
+
+    function clampPanel(w) {
+      const max = Math.max(MIN, split.getBoundingClientRect().width - EDITOR_MIN);
+      return Math.max(MIN, Math.min(w, max));
+    }
+
+    let dragging = false;
+    function onDown(e) {
+      dragging = true;
+      document.body.classList.add('resizing-panel');
+      document.body.style.cursor = 'col-resize';
+      document.body.style.userSelect = 'none';
+      e.preventDefault();
+      window.addEventListener('mousemove', onMove);
+      window.addEventListener('mouseup', onUp);
+    }
+    function onMove(e) {
+      if (!dragging) return;
+      // panel is docked right: its left edge = split.right - width
+      const rightEdge = split.getBoundingClientRect().right;
+      const w = clampPanel(rightEdge - e.clientX);
+      panel.style.width = w + 'px';
+    }
+    function onUp() {
+      if (!dragging) return;
+      dragging = false;
+      document.body.classList.remove('resizing-panel');
+      document.body.style.cursor = '';
+      document.body.style.userSelect = '';
+      localStorage.setItem('ss-panel-w', String(parseInt(panel.style.width, 10) || ''));
+      window.removeEventListener('mousemove', onMove);
+      window.removeEventListener('mouseup', onUp);
+    }
+    resizer.addEventListener('mousedown', onDown);
+    // double-click the handle to reset to default
+    resizer.addEventListener('dblclick', () => {
+      panel.style.width = '';
+      localStorage.removeItem('ss-panel-w');
+    });
+    // keep within bounds on window resize
+    window.addEventListener('resize', () => {
+      if (panel.style.width) panel.style.width = clampPanel(parseInt(panel.style.width, 10)) + 'px';
+    });
+  }
+
   /* ============================================================
      Toast
      ============================================================ */
@@ -443,7 +527,13 @@
      Init
      ============================================================ */
   function init() {
-    applyTheme(state.theme);
+    applyTheme(state.theme, false);
+    // follow OS theme live, until the user explicitly picks one
+    if (window.matchMedia) {
+      window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('ss-theme')) applyTheme(e.matches ? 'light' : 'dark', false);
+      });
+    }
     palette.el = $('#palette-overlay');
     palette.input = $('#palette-input');
     palette.list = $('#palette-list');
@@ -489,6 +579,9 @@
     // panel actions
     $('#panel-close')?.addEventListener('click', togglePanel);
     $('#panel-trash')?.addEventListener('click', () => runCommand('clear'));
+
+    // drag-to-resize the terminal panel (horizontal)
+    setupPanelResizer();
 
     // status bar interactions
     $('#sb-theme')?.addEventListener('click', cycleTheme);
