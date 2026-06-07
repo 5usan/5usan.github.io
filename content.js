@@ -80,7 +80,9 @@ FILES['README.md'] = {
       <div class="readme-meta">
         <span>Fairborn, Ohio</span>
         <span>Wright State University · KASTLE Lab</span>
-        <span>github.com/5usan</span>
+        <span><a href="https://github.com/5usan" target="_blank" rel="noopener">github.com/5usan</a></span>
+        <span><a href="https://www.linkedin.com/in/5usan/" target="_blank" rel="noopener">linkedin.com/in/5usan</a></span>
+        <span><a href="https://leetcode.com/u/5usan/" target="_blank" rel="noopener">leetcode.com/u/5usan</a></span>
       </div>
     </div>
     <div class="readme-photo-card">

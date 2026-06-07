@@ -841,6 +841,8 @@ body {
 }
 .readme-meta span { display: inline-flex; align-items: center; gap: 8px; }
 .readme-meta span::before { content: "◦"; color: var(--gutter-fg); }
+.readme-meta a { color: inherit; text-decoration: none; }
+.readme-meta a:hover { color: var(--accent-hover); }
 
 /* photo + stats card */
 .readme-photo-frame { position: relative; }
