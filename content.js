@@ -814,8 +814,8 @@ FILES['certifications.md'] = {
     <a class="cert-card" href="https://www.coursera.org/account/accomplishments/verify/NSDPTTVPMQ2F" target="_blank" rel="noopener">
       <span class="cert-ic">${ICONS.award}</span>
       <span class="cert-meta">
-        <b>Coursera Professional Certificate</b>
-        <span class="cert-issuer">Coursera · Verified credential</span>
+        <b>Develop Generative AI Applications: Get Started</b>
+        <span class="cert-issuer">IBM · Verified credential</span>
         <span class="cert-id">ID&nbsp;NSDPTTVPMQ2F</span>
       </span>
       <span class="cert-verify">Verify ↗</span>
@@ -823,8 +823,8 @@ FILES['certifications.md'] = {
     <a class="cert-card" href="https://www.coursera.org/account/accomplishments/verify/UES271K1B01Q" target="_blank" rel="noopener">
       <span class="cert-ic">${ICONS.award}</span>
       <span class="cert-meta">
-        <b>Coursera Professional Certificate</b>
-        <span class="cert-issuer">Coursera · Verified credential</span>
+        <b>System Design Fundamentals</b>
+        <span class="cert-issuer">Pearson · Verified credential</span>
         <span class="cert-id">ID&nbsp;UES271K1B01Q</span>
       </span>
       <span class="cert-verify">Verify ↗</span>
@@ -832,15 +832,13 @@ FILES['certifications.md'] = {
     <a class="cert-card" href="https://www.coursera.org/account/accomplishments/verify/J4PJD43F0PPN" target="_blank" rel="noopener">
       <span class="cert-ic">${ICONS.award}</span>
       <span class="cert-meta">
-        <b>Coursera Professional Certificate</b>
-        <span class="cert-issuer">Coursera · Verified credential</span>
+        <b>Crash Course on Python</b>
+        <span class="cert-issuer">Google · Verified credential</span>
         <span class="cert-id">ID&nbsp;J4PJD43F0PPN</span>
       </span>
       <span class="cert-verify">Verify ↗</span>
     </a>
   </div>
-
-  <blockquote>📝 Titles shown are placeholders — send the exact course names &amp; issuing partners and I'll swap them in.</blockquote>
   `
 };
 
