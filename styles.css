@@ -496,7 +496,7 @@ body {
   font-size: 14.5px;
   color: var(--editor-fg);
 }
-.md-view h1 { font-size: clamp(24px, 4.5vw, 30px); color: var(--md-h); font-weight: 600; margin: 6px 0 6px; letter-spacing: -.3px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.md-view h1 { font-size: clamp(36px, 4vw, 48px); color: var(--md-h); font-weight: 700; margin: 0 0 8px; letter-spacing: -.02em; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 .md-view h2 { font-size: 19px; color: var(--md-h); font-weight: 600; margin: 34px 0 12px; padding-bottom: 7px; border-bottom: 1px solid var(--border); }
 .md-view h3 { font-size: 15.5px; color: var(--md-h); font-weight: 600; margin: 22px 0 8px; }
 .md-view p { margin: 10px 0; }
@@ -576,7 +576,7 @@ body {
 /* project page — horizontal meta row + two-column body */
 .proj-head h1 {
   font-family: 'Instrument Sans', var(--ui), sans-serif;
-  font-weight: 700; font-size: clamp(36px, 5vw, 56px);
+  font-weight: 700; font-size: clamp(36px, 4vw, 48px);
   letter-spacing: -.02em; line-height: 1.0;
   color: var(--md-h); margin: 0;
 }
@@ -1016,19 +1016,17 @@ html[data-theme="light"] .readme-repo-intro { color: #4a5159; }
 .sw-card:hover .sw-card-arrow { color: var(--accent-hover); transform: translateX(3px); }
 
 /* ── experience timeline — r1-timeline design (exact spec) ── */
-.md-view:has(.rt-root) { padding: 0; }
 .rt-root {
   --bg: var(--editor); --surface2: var(--md-code-bg);
   --ink: var(--md-h); --ink2: var(--editor-fg);
   --muted: var(--breadcrumb-fg); --faint: var(--breadcrumb-fg);
   --line: var(--border); --line2: var(--border);
-  width:100%; background:var(--bg); color:var(--ink); padding:60px 72px;
   font-family:"Instrument Sans",system-ui,sans-serif; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
 }
 .rt-root, .rt-root * { box-sizing:border-box; }
-.rt-root .rt-title { font-family:"Bricolage Grotesque",sans-serif; font-weight:700; font-size:48px; letter-spacing:-.03em; margin:0; line-height:1; display:block; color:var(--ink); }
-.rt-root .rt-tag { font-family:"JetBrains Mono",monospace; font-size:15px; color:var(--accent); margin:16px 0 4px; }
-.rt-rule { height:1px; background:var(--line); margin:30px 0 8px; }
+.rt-root .rt-title { font-family:"Bricolage Grotesque",sans-serif; font-weight:700; font-size:clamp(36px, 4vw, 48px); letter-spacing:-.03em; margin:0; line-height:1; display:block; color:var(--ink); }
+.rt-root .rt-tag { font-family:"JetBrains Mono",monospace; font-size:14px; color:var(--accent); margin:6px 0 0; }
+.rt-rule { height:1px; background:var(--line); margin:24px 0 0; }
 .rt-tl { position:relative; padding-left:34px; }
 .rt-root .rt-tl::before { content:""; position:absolute; left:5px; top:14px; bottom:18px; width:2px; background:linear-gradient(var(--line2),var(--line2)); }
 .rt-entry { position:relative; padding:24px 0 30px; }
@@ -1044,7 +1042,7 @@ html[data-theme="light"] .readme-repo-intro { color: #4a5159; }
 .rt-root .rt-list li::before { content:""; position:absolute; left:0; top:8px; width:5px; height:5px; border-radius:50%; background:var(--faint); }
 .rt-root .rt-list li b { color:var(--ink); font-weight:600; }
 .rt-tags { display:flex; flex-wrap:wrap; gap:7px; margin-top:18px; }
-.rt-chip { font-family:"JetBrains Mono",monospace; font-size:10.5px; color:var(--ink2); background:var(--surface2); border:1px solid var(--line2); border-radius:6px; padding:4px 8px; }
+.rt-chip { font-family:"JetBrains Mono",monospace; font-size:11.5px; color:var(--ink2); background:var(--surface2); border:1px solid var(--line2); border-radius:5px; padding:3px 9px; }
 
 /* pull quote section */
 .readme-quote-sec { padding: 76px 0; border-top: 1px solid var(--border); }
@@ -1090,6 +1088,5 @@ html[data-theme="light"] .readme-repo-intro { color: #4a5159; }
   .proj-meta-row { flex-direction: column; gap: 8px; }
   .proj-meta-source { padding: 8px 0; }
   .proj-body { grid-template-columns: 1fr; }
-  .rt-root { padding: 40px 24px; }
   .rt-erow { flex-direction: column; gap: 4px; }
 }
