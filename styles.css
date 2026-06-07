@@ -573,6 +573,50 @@ body {
 }
 .callout b { color: var(--accent-hover); }
 
+/* project page — two-column editorial layout */
+.proj-head h1 {
+  font-family: "Bricolage Grotesque", var(--ui), sans-serif;
+  font-weight: 800; font-size: clamp(36px, 5vw, 58px);
+  letter-spacing: -.03em; line-height: 1.0;
+  color: var(--md-h); margin: 0;
+}
+.proj-layout {
+  display: grid; grid-template-columns: 220px 1fr; gap: 0 48px;
+}
+.proj-sidebar { border-right: 1px solid var(--border); padding-right: 32px; }
+.proj-sidebar-block { padding: 18px 0; border-bottom: 1px solid var(--border); }
+.proj-sidebar-block:first-child { padding-top: 0; }
+.proj-sidebar-block:last-child { border-bottom: none; }
+.proj-sidebar-label {
+  font-family: var(--mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase;
+  color: #6a6a6a; margin-bottom: 8px;
+}
+.proj-sidebar-value { font-size: 15px; color: var(--editor-fg); line-height: 1.5; }
+.proj-sidebar .chips { margin: 0; }
+.proj-source-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--mono); font-size: 12px;
+  padding: 7px 12px; border-radius: 7px;
+  background: var(--md-code-bg); border: 1px solid var(--border);
+  color: var(--editor-fg) !important; text-decoration: none !important;
+  transition: border-color .15s;
+}
+.proj-source-link:hover { border-color: var(--accent); }
+.proj-source-link svg { width: 15px; height: 15px; flex: 0 0 15px; }
+.proj-main { min-width: 0; padding-left: 4px; }
+.proj-intro {
+  border-left: 3px solid var(--accent); padding: 6px 0 6px 20px;
+  margin-bottom: 28px; font-size: 15px; line-height: 1.72; color: var(--editor-fg);
+}
+.proj-intro b { color: var(--md-h); font-weight: 600; }
+.proj-section { margin: 28px 0 14px; }
+.proj-section-label {
+  display: flex; align-items: center; gap: 16px;
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase;
+  color: #8a8a8a;
+}
+.proj-section-label::after { content: ""; flex: 1; height: 1px; background: var(--border); }
+
 /* contact cards */
 .contact-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 18px 0; }
 .contact-card {
@@ -965,4 +1009,7 @@ html[data-theme="light"] .readme-repo-intro { color: #4a5159; }
   .readme-repo { grid-template-columns: 1fr; }
   .readme-footer-grid { flex-direction: column; align-items: flex-start; }
   .readme-colophon { text-align: left; }
+  .sw-grid { grid-template-columns: 1fr; }
+  .proj-layout { grid-template-columns: 1fr; }
+  .proj-sidebar { border-right: none; border-bottom: 1px solid var(--border); padding-right: 0; padding-bottom: 24px; margin-bottom: 24px; }
 }

@@ -189,31 +189,58 @@ FILES['graphrag.md'] = {
   name: 'graphrag.md', path: 'portfolio/projects/graphrag.md', icon: 'md', iconClass: 'ic-md',
   lang: 'Markdown', render: 'md', git: 'U',
   body: `
-  <div class="proj-head"><h1 style="margin-bottom:0">GraphRAG</h1><span class="year">2024 – Present · M.S. Thesis</span></div>
-  <div class="subtitle">// Ontology-grounded retrieval-augmented generation</div>
-  <div class="chips">
-    <span class="chip">FastAPI</span><span class="chip">Neo4j</span><span class="chip">RDFLib</span>
-    <span class="chip">BERT</span><span class="chip">CUDA</span><span class="chip">Singularity</span>
+  <div class="proj-head">
+    <h1>GraphRAG</h1>
+    <span class="year">2024 — Present · M.S. Thesis</span>
   </div>
-  <a class="repo-link" href="https://github.com/5usan/GraphRAG" target="_blank" rel="noopener">${ICONS.github} github.com/5usan/GraphRAG <span class="arrow">↗</span></a>
-
-  <div class="callout"><b>The idea:</b> Most RAG systems retrieve from unstructured text and hope the LLM stays faithful.
-  GraphRAG instead grounds retrieval directly in <strong>RDF ontologies</strong>, so every generated answer is traceable
-  back to a formal competency question — auditable AI by construction.</div>
-
-  <h2>What I built</h2>
-  <ul>
-    <li>A graph-based RAG framework that grounds LLM retrieval in RDF ontologies, using <strong>BERT embeddings</strong>
-    and <strong>Neo4j</strong> for semantic graph traversal.</li>
-    <li>Exposed ontology querying as a <strong>REST API (FastAPI)</strong> with <strong>CUDA-accelerated</strong> embeddings.</li>
-    <li>Containerized with <strong>Singularity</strong> for HPC deployment on Wright State's <strong>FRY cluster</strong>.</li>
-    <li>An ontology <em>chunking</em> framework that optimizes context windows and raises accuracy on
-    natural-language → <strong>SPARQL</strong> translation.</li>
-  </ul>
-
-  <h2>Why it matters</h2>
-  <p>It bridges <strong>symbolic knowledge representation</strong> and <strong>neural retrieval</strong>: outputs are
-  structured, auditable, and traceable to ontology competency questions — instead of plausible-sounding hallucination.</p>
+  <div class="subtitle">// Ontology-grounded retrieval-augmented generation</div>
+  <hr>
+  <div class="proj-layout">
+    <aside class="proj-sidebar">
+      <div class="proj-sidebar-block">
+        <div class="proj-sidebar-label">Timeline</div>
+        <div class="proj-sidebar-value">2024 — Present</div>
+      </div>
+      <div class="proj-sidebar-block">
+        <div class="proj-sidebar-label">Type</div>
+        <div class="proj-sidebar-value">M.S. Thesis</div>
+      </div>
+      <div class="proj-sidebar-block">
+        <div class="proj-sidebar-label">Role</div>
+        <div class="proj-sidebar-value">Sole researcher · KASTLE Lab</div>
+      </div>
+      <div class="proj-sidebar-block">
+        <div class="proj-sidebar-label">Stack</div>
+        <div class="chips">
+          <span class="chip">FastAPI</span><span class="chip">Neo4j</span><span class="chip">RDFLib</span>
+          <span class="chip">BERT</span><span class="chip">CUDA</span><span class="chip">Singularity</span>
+        </div>
+      </div>
+      <div class="proj-sidebar-block">
+        <div class="proj-sidebar-label">Source</div>
+        <a class="proj-source-link" href="https://github.com/5usan/GraphRAG" target="_blank" rel="noopener">
+          ${ICONS.github} /5usan/GraphRAG
+        </a>
+      </div>
+    </aside>
+    <div class="proj-main">
+      <div class="proj-intro"><b>The idea —</b> Most RAG systems retrieve from unstructured text and hope the LLM stays faithful.
+      GraphRAG instead grounds retrieval directly in <strong>RDF ontologies</strong>, so every generated answer is traceable
+      back to a formal competency question — auditable AI by construction.</div>
+      <div class="proj-section"><span class="proj-section-label">What I built</span></div>
+      <ul>
+        <li>A graph-based RAG framework that grounds LLM retrieval in RDF ontologies, using <strong>BERT embeddings</strong>
+        and <strong>Neo4j</strong> for semantic graph traversal.</li>
+        <li>Exposed ontology querying as a <strong>REST API (FastAPI)</strong> with <strong>CUDA-accelerated</strong> embeddings.</li>
+        <li>Containerized with <strong>Singularity</strong> for HPC deployment on Wright State's <strong>FRY cluster</strong>.</li>
+        <li>An ontology <em>chunking</em> framework that optimizes context windows and raises accuracy on
+        natural-language → <strong>SPARQL</strong> translation.</li>
+      </ul>
+      <div class="proj-section"><span class="proj-section-label">Why it matters</span></div>
+      <p>It bridges <strong>symbolic knowledge representation</strong> and <strong>neural retrieval</strong>: outputs are
+      structured, auditable, and traceable to ontology competency questions — instead of plausible-sounding hallucination.</p>
+    </div>
+  </div>
   `
 };
 
@@ -222,25 +249,53 @@ FILES['multimodal-rag.md'] = {
   name: 'multimodal-rag.md', path: 'portfolio/projects/multimodal-rag.md', icon: 'md', iconClass: 'ic-md',
   lang: 'Markdown', render: 'md', git: 'U',
   body: `
-  <div class="proj-head"><h1 style="margin-bottom:0">Multimodal RAG Framework</h1><span class="year">2025 – 2026</span></div>
-  <div class="subtitle">// Visual-semantic retrieval for complex documents</div>
-  <div class="chips">
-    <span class="chip">ColPali</span><span class="chip">Byaldi</span><span class="chip">LLaVA-v1.5</span>
-    <span class="chip">LlamaIndex</span><span class="chip">RAGAS</span><span class="chip">LoRA</span>
+  <div class="proj-head">
+    <h1>Multimodal RAG</h1>
+    <span class="year">2025 – 2026 · Research</span>
   </div>
-  <a class="repo-link" href="https://github.com/5usan/Multimodal-RAG" target="_blank" rel="noopener">${ICONS.github} github.com/5usan/Multimodal-RAG <span class="arrow">↗</span></a>
-
-  <div class="callout"><b>The problem:</b> Text-only RAG has a visual blind spot — charts, tables, and figures in
-  multi-page documents get lost. This system retrieves on <strong>visual semantics</strong>, not just extracted text.</div>
-
-  <h2>Highlights</h2>
-  <ul>
-    <li>End-to-end multimodal RAG for visual-semantic retrieval across complex, multi-page documents.</li>
-    <li>Applied <strong>4-bit quantization</strong> + <strong>LoRA</strong> to fit a 16 GB VRAM budget.</li>
-    <li>Ran experiments on the WSU HPC cluster — <strong>SLURM</strong>, <strong>Singularity</strong>, NVIDIA <strong>P100</strong> GPUs.</li>
-    <li>Evaluated with <strong>RAGAS</strong> using <em>MultiModalFaithfulness</em> &amp; <em>MultiModalRelevance</em>
-    on the <strong>ViDoRe</strong> and <strong>DocVQA</strong> benchmarks.</li>
-  </ul>
+  <div class="subtitle">// Visual-semantic retrieval for complex documents</div>
+  <hr>
+  <div class="proj-layout">
+    <aside class="proj-sidebar">
+      <div class="proj-sidebar-block">
+        <div class="proj-sidebar-label">Timeline</div>
+        <div class="proj-sidebar-value">2025 – 2026</div>
+      </div>
+      <div class="proj-sidebar-block">
+        <div class="proj-sidebar-label">Type</div>
+        <div class="proj-sidebar-value">Research</div>
+      </div>
+      <div class="proj-sidebar-block">
+        <div class="proj-sidebar-label">Role</div>
+        <div class="proj-sidebar-value">Sole researcher · WSU HPC</div>
+      </div>
+      <div class="proj-sidebar-block">
+        <div class="proj-sidebar-label">Stack</div>
+        <div class="chips">
+          <span class="chip">ColPali</span><span class="chip">Byaldi</span><span class="chip">LLaVA-v1.5</span>
+          <span class="chip">LlamaIndex</span><span class="chip">RAGAS</span><span class="chip">LoRA</span>
+        </div>
+      </div>
+      <div class="proj-sidebar-block">
+        <div class="proj-sidebar-label">Source</div>
+        <a class="proj-source-link" href="https://github.com/5usan/Multimodal-RAG" target="_blank" rel="noopener">
+          ${ICONS.github} /5usan/Multimodal-RAG
+        </a>
+      </div>
+    </aside>
+    <div class="proj-main">
+      <div class="proj-intro"><b>The problem —</b> Text-only RAG has a visual blind spot — charts, tables, and figures in
+      multi-page documents get lost. This system retrieves on <strong>visual semantics</strong>, not just extracted text.</div>
+      <div class="proj-section"><span class="proj-section-label">Highlights</span></div>
+      <ul>
+        <li>End-to-end multimodal RAG for visual-semantic retrieval across complex, multi-page documents.</li>
+        <li>Applied <strong>4-bit quantization</strong> + <strong>LoRA</strong> to fit a 16 GB VRAM budget.</li>
+        <li>Ran experiments on the WSU HPC cluster — <strong>SLURM</strong>, <strong>Singularity</strong>, NVIDIA <strong>P100</strong> GPUs.</li>
+        <li>Evaluated with <strong>RAGAS</strong> using <em>MultiModalFaithfulness</em> &amp; <em>MultiModalRelevance</em>
+        on the <strong>ViDoRe</strong> and <strong>DocVQA</strong> benchmarks.</li>
+      </ul>
+    </div>
+  </div>
   `
 };
 
@@ -249,23 +304,51 @@ FILES['arom-ontology.md'] = {
   name: 'arom-ontology.md', path: 'portfolio/projects/arom-ontology.md', icon: 'md', iconClass: 'ic-md',
   lang: 'Markdown', render: 'md', git: 'U',
   body: `
-  <div class="proj-head"><h1 style="margin-bottom:0">AROM Ontology</h1><span class="year">Fall 2025</span></div>
-  <div class="subtitle">// Autonomous Robotic Orchestration Modular Ontology</div>
-  <div class="chips">
-    <span class="chip">OWL</span><span class="chip">Protégé</span><span class="chip">SPARQL</span>
-    <span class="chip">RDFLib</span><span class="chip">yEd</span>
+  <div class="proj-head">
+    <h1>AROM Ontology</h1>
+    <span class="year">Fall 2025 · Research</span>
   </div>
-  <a class="repo-link" href="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology" target="_blank" rel="noopener">${ICONS.github} kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology <span class="arrow">↗</span></a>
-
-  <div class="callout"><b>Goal:</b> A modular ontology that lets autonomous multi-agent robotic systems reason about
-  tasks, capabilities, and goals in a shared, machine-interpretable vocabulary.</div>
-
-  <h2>What's inside</h2>
-  <ul>
-    <li>Built on <strong>8 ontological design patterns</strong> — Archetype, Capability, Goal-Task, Spatial-Thing, and more.</li>
-    <li>Integrated <strong>6 robotic datasets</strong>: RH20T-P, Droid, BridgeData V2, MOAD, ALFRED, LaViA.</li>
-    <li>Generated <strong>OWL axioms</strong> covering task decomposition and agent–capability matching.</li>
-  </ul>
+  <div class="subtitle">// Autonomous Robotic Orchestration Modular Ontology</div>
+  <hr>
+  <div class="proj-layout">
+    <aside class="proj-sidebar">
+      <div class="proj-sidebar-block">
+        <div class="proj-sidebar-label">Timeline</div>
+        <div class="proj-sidebar-value">Fall 2025</div>
+      </div>
+      <div class="proj-sidebar-block">
+        <div class="proj-sidebar-label">Type</div>
+        <div class="proj-sidebar-value">Research</div>
+      </div>
+      <div class="proj-sidebar-block">
+        <div class="proj-sidebar-label">Role</div>
+        <div class="proj-sidebar-value">Graduate Researcher · KASTLE Lab</div>
+      </div>
+      <div class="proj-sidebar-block">
+        <div class="proj-sidebar-label">Stack</div>
+        <div class="chips">
+          <span class="chip">OWL</span><span class="chip">Protégé</span><span class="chip">SPARQL</span>
+          <span class="chip">RDFLib</span><span class="chip">yEd</span>
+        </div>
+      </div>
+      <div class="proj-sidebar-block">
+        <div class="proj-sidebar-label">Source</div>
+        <a class="proj-source-link" href="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology" target="_blank" rel="noopener">
+          ${ICONS.github} kastle-lab/AROM
+        </a>
+      </div>
+    </aside>
+    <div class="proj-main">
+      <div class="proj-intro"><b>The goal —</b> A modular ontology that lets autonomous multi-agent robotic systems reason about
+      tasks, capabilities, and goals in a shared, machine-interpretable vocabulary.</div>
+      <div class="proj-section"><span class="proj-section-label">What's inside</span></div>
+      <ul>
+        <li>Built on <strong>8 ontological design patterns</strong> — Archetype, Capability, Goal-Task, Spatial-Thing, and more.</li>
+        <li>Integrated <strong>6 robotic datasets</strong>: RH20T-P, Droid, BridgeData V2, MOAD, ALFRED, LaViA.</li>
+        <li>Generated <strong>OWL axioms</strong> covering task decomposition and agent–capability matching.</li>
+      </ul>
+    </div>
+  </div>
   `
 };
 
@@ -274,18 +357,51 @@ FILES['federated-llm.md'] = {
   name: 'federated-llm.md', path: 'portfolio/projects/federated-llm.md', icon: 'md', iconClass: 'ic-md',
   lang: 'Markdown', render: 'md', git: 'U',
   body: `
-  <div class="proj-head"><h1 style="margin-bottom:0">Federated Pipeline Learning for LLMs</h1><span class="year">2025</span></div>
-  <div class="subtitle">// Privacy-preserving, multi-GPU NLP training</div>
-  <div class="chips">
-    <span class="chip">DistilBERT</span><span class="chip">Flower</span><span class="chip">FairScale</span><span class="chip">PyTorch</span>
+  <div class="proj-head">
+    <h1>Federated Pipeline Learning for LLMs</h1>
+    <span class="year">2025 · Research</span>
   </div>
-  <a class="repo-link" href="https://github.com/5usan/Federated-LLM-Learning" target="_blank" rel="noopener">${ICONS.github} github.com/5usan/Federated-LLM-Learning <span class="arrow">↗</span></a>
-  <h2>Summary</h2>
-  <ul>
-    <li>A privacy-preserving <strong>federated learning</strong> system with <strong>pipeline-parallel</strong>,
-    multi-GPU NLP training across client-specific tasks.</li>
-    <li>Used <strong>FairScale</strong> for pipeline parallelism and the <strong>Flower</strong> framework for federation.</li>
-  </ul>
+  <div class="subtitle">// Privacy-preserving, multi-GPU NLP training</div>
+  <hr>
+  <div class="proj-layout">
+    <aside class="proj-sidebar">
+      <div class="proj-sidebar-block">
+        <div class="proj-sidebar-label">Timeline</div>
+        <div class="proj-sidebar-value">2025</div>
+      </div>
+      <div class="proj-sidebar-block">
+        <div class="proj-sidebar-label">Type</div>
+        <div class="proj-sidebar-value">Research</div>
+      </div>
+      <div class="proj-sidebar-block">
+        <div class="proj-sidebar-label">Role</div>
+        <div class="proj-sidebar-value">Sole researcher</div>
+      </div>
+      <div class="proj-sidebar-block">
+        <div class="proj-sidebar-label">Stack</div>
+        <div class="chips">
+          <span class="chip">DistilBERT</span><span class="chip">Flower</span>
+          <span class="chip">FairScale</span><span class="chip">PyTorch</span>
+        </div>
+      </div>
+      <div class="proj-sidebar-block">
+        <div class="proj-sidebar-label">Source</div>
+        <a class="proj-source-link" href="https://github.com/5usan/Federated-LLM-Learning" target="_blank" rel="noopener">
+          ${ICONS.github} /5usan/Federated-LLM-Learning
+        </a>
+      </div>
+    </aside>
+    <div class="proj-main">
+      <div class="proj-intro"><b>The idea —</b> A privacy-preserving federated learning system with <strong>pipeline-parallel</strong>,
+      multi-GPU NLP training across client-specific tasks — each client trains locally, no raw data leaves the device.</div>
+      <div class="proj-section"><span class="proj-section-label">What I built</span></div>
+      <ul>
+        <li>A privacy-preserving <strong>federated learning</strong> system with <strong>pipeline-parallel</strong>,
+        multi-GPU NLP training across client-specific tasks.</li>
+        <li>Used <strong>FairScale</strong> for pipeline parallelism and the <strong>Flower</strong> framework for federation.</li>
+      </ul>
+    </div>
+  </div>
   `
 };
 
@@ -294,18 +410,51 @@ FILES['face-detection.md'] = {
   name: 'face-detection.md', path: 'portfolio/projects/face-detection.md', icon: 'md', iconClass: 'ic-md',
   lang: 'Markdown', render: 'md', git: 'U',
   body: `
-  <div class="proj-head"><h1 style="margin-bottom:0">Face &amp; Person Detection</h1><span class="year">Fall 2024</span></div>
-  <div class="subtitle">// Real-time detection with YOLOv8</div>
-  <div class="chips">
-    <span class="chip">YOLOv8</span><span class="chip">OpenCV</span><span class="chip">PyTorch</span><span class="chip">Roboflow</span>
+  <div class="proj-head">
+    <h1>Face &amp; Person Detection</h1>
+    <span class="year">Fall 2024 · Course Project</span>
   </div>
-  <a class="repo-link" href="https://github.com/5usan/Face-Detection" target="_blank" rel="noopener">${ICONS.github} github.com/5usan/Face-Detection <span class="arrow">↗</span></a>
-  <h2>Results</h2>
-  <ul>
-    <li>Trained <strong>YOLOv8</strong> on <strong>1,880</strong> Roboflow images over <strong>120 epochs</strong>.</li>
-    <li>Achieved <strong>76.3%</strong> test accuracy and a <strong>74.7%</strong> F1 score.</li>
-    <li>Deployed for <strong>live webcam</strong> real-time detection.</li>
-  </ul>
+  <div class="subtitle">// Real-time detection with YOLOv8</div>
+  <hr>
+  <div class="proj-layout">
+    <aside class="proj-sidebar">
+      <div class="proj-sidebar-block">
+        <div class="proj-sidebar-label">Timeline</div>
+        <div class="proj-sidebar-value">Fall 2024</div>
+      </div>
+      <div class="proj-sidebar-block">
+        <div class="proj-sidebar-label">Type</div>
+        <div class="proj-sidebar-value">Course Project</div>
+      </div>
+      <div class="proj-sidebar-block">
+        <div class="proj-sidebar-label">Role</div>
+        <div class="proj-sidebar-value">Sole researcher</div>
+      </div>
+      <div class="proj-sidebar-block">
+        <div class="proj-sidebar-label">Stack</div>
+        <div class="chips">
+          <span class="chip">YOLOv8</span><span class="chip">OpenCV</span>
+          <span class="chip">PyTorch</span><span class="chip">Roboflow</span>
+        </div>
+      </div>
+      <div class="proj-sidebar-block">
+        <div class="proj-sidebar-label">Source</div>
+        <a class="proj-source-link" href="https://github.com/5usan/Face-Detection" target="_blank" rel="noopener">
+          ${ICONS.github} /5usan/Face-Detection
+        </a>
+      </div>
+    </aside>
+    <div class="proj-main">
+      <div class="proj-intro"><b>The goal —</b> Train and deploy a real-time face and person detector using <strong>YOLOv8</strong>
+      on a custom Roboflow dataset, optimized for live webcam inference.</div>
+      <div class="proj-section"><span class="proj-section-label">Results</span></div>
+      <ul>
+        <li>Trained <strong>YOLOv8</strong> on <strong>1,880</strong> Roboflow images over <strong>120 epochs</strong>.</li>
+        <li>Achieved <strong>76.3%</strong> test accuracy and a <strong>74.7%</strong> F1 score.</li>
+        <li>Deployed for <strong>live webcam</strong> real-time detection.</li>
+      </ul>
+    </div>
+  </div>
   `
 };
 
