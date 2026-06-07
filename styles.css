@@ -583,10 +583,13 @@ body {
 .proj-head .year { font-family: 'Instrument Sans', var(--ui), sans-serif; }
 .proj-meta-row {
   display: flex; align-items: stretch;
-  border: 1px solid var(--border); border-radius: 10px;
-  overflow: hidden; margin: 22px 0 32px;
+  gap: 10px; margin: 22px 0 32px;
 }
-.proj-meta-card { flex: 1; padding: 14px 20px; border-right: 1px solid var(--border); }
+.proj-meta-card {
+  flex: 1; padding: 14px 20px;
+  border: 1px solid var(--border); border-radius: 9px;
+  border-top: 2px solid var(--accent);
+}
 .proj-meta-label {
   font-family: 'Instrument Sans', var(--ui), sans-serif;
   font-size: 10px; letter-spacing: .12em; text-transform: uppercase;
@@ -1023,8 +1026,7 @@ html[data-theme="light"] .readme-repo-intro { color: #4a5159; }
   .readme-footer-grid { flex-direction: column; align-items: flex-start; }
   .readme-colophon { text-align: left; }
   .sw-grid { grid-template-columns: 1fr; }
-  .proj-meta-row { flex-direction: column; }
-  .proj-meta-card { border-right: none; border-bottom: 1px solid var(--border); }
-  .proj-meta-source { padding: 16px 20px; }
+  .proj-meta-row { flex-direction: column; gap: 8px; }
+  .proj-meta-source { padding: 8px 0; }
   .proj-body { grid-template-columns: 1fr; }
 }
