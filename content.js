@@ -143,6 +143,63 @@ FILES['README.md'] = {
   <section class="readme-section" id="explore">
     <div class="readme-sec-head">
       <span class="readme-sec-num">03</span>
+      <span class="readme-sec-title">Selected Work</span>
+      <span class="readme-sec-rule"></span>
+    </div>
+    <p class="readme-repo-intro">Three threads of the same question: how do you make a generative model show its
+    work? Each grounds the black box in something you can audit.</p>
+    <div class="sw-grid">
+      <div class="sw-card featured" data-open="graphrag.md">
+        <div class="sw-card-head">
+          <span class="sw-card-num">01</span>
+          <span class="sw-card-type">Thesis</span>
+        </div>
+        <h3 class="sw-card-title">GraphRAG</h3>
+        <p class="sw-card-desc">Retrieval-augmented generation grounded directly in RDF ontologies — every answer traces back to a formal competency question.</p>
+        <div class="sw-card-chips">
+          <span class="chip">RDF</span><span class="chip">SPARQL</span><span class="chip">LLaMA 3</span><span class="chip">FRY HPC</span>
+        </div>
+        <div class="sw-card-footer">
+          <span class="sw-card-path">~/graphrag</span>
+          <span class="sw-card-arrow">→</span>
+        </div>
+      </div>
+      <div class="sw-card" data-open="multimodal-rag.md">
+        <div class="sw-card-head">
+          <span class="sw-card-num">02</span>
+          <span class="sw-card-type">Research</span>
+        </div>
+        <h3 class="sw-card-title">Multimodal RAG</h3>
+        <p class="sw-card-desc">Retrieval across a joint text + image embedding space, so the model can ground answers in figures — not just prose.</p>
+        <div class="sw-card-chips">
+          <span class="chip">CLIP</span><span class="chip">FAISS</span><span class="chip">PyTorch</span>
+        </div>
+        <div class="sw-card-footer">
+          <span class="sw-card-path">~/multimodal-rag</span>
+          <span class="sw-card-arrow">→</span>
+        </div>
+      </div>
+      <div class="sw-card" data-open="arom-ontology.md">
+        <div class="sw-card-head">
+          <span class="sw-card-num">03</span>
+          <span class="sw-card-type">Research</span>
+        </div>
+        <h3 class="sw-card-title">AROM Ontology</h3>
+        <p class="sw-card-desc">A reasoning-oriented abstraction layer for knowledge graphs — semantic chunking that keeps structure intact for RAG.</p>
+        <div class="sw-card-chips">
+          <span class="chip">OWL</span><span class="chip">Protégé</span><span class="chip">Python</span>
+        </div>
+        <div class="sw-card-footer">
+          <span class="sw-card-path">~/arom-ontology</span>
+          <span class="sw-card-arrow">→</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="readme-section" id="repo-map">
+    <div class="readme-sec-head">
+      <span class="readme-sec-num">04</span>
       <span class="readme-sec-title">Repository map</span>
       <span class="readme-sec-rule"></span>
     </div>
