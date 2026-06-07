@@ -1058,7 +1058,7 @@ html[data-theme="light"] .readme-repo-intro { color: #4a5159; }
 .ed-root .ed-eyebrow { font-family:"JetBrains Mono",monospace; font-size:14px; color:var(--accent); margin:6px 0 0; }
 .ed-root .ed-eyebrow b { font-weight:500; }
 .ed-root .ed-rule { height:1px; background:var(--line); margin:24px 0 0; }
-.ed-root .ed-entry { display:grid; grid-template-columns:60px 1fr; gap:24px; align-items:start; padding:24px 0 30px; border-top:1px solid var(--line); }
+.ed-root .ed-entry { display:grid; grid-template-columns:60px 1fr; gap:12px; align-items:start; padding:24px 0 30px; border-top:1px solid var(--line); }
 .ed-root .ed-num { font-family:"Bricolage Grotesque",sans-serif; font-weight:700; font-size:28px; letter-spacing:-.03em; color:var(--faint); line-height:1; }
 .ed-root .ed-erow { display:flex; align-items:baseline; justify-content:space-between; gap:20px; flex-wrap:wrap; }
 .ed-root .ed-school { font-family:"Bricolage Grotesque",sans-serif; font-weight:700; font-size:25px; letter-spacing:-.02em; color:var(--ink); margin:0; line-height:1.1; padding-bottom:0; border-bottom:none; }
