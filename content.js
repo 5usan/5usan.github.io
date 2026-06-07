@@ -706,66 +706,34 @@ FILES['education.md'] = {
 /* ---------- skills.ts ---------- */
 FILES['skills.ts'] = {
   name: 'skills.ts', path: 'portfolio/skills/skills.ts', icon: 'ts', iconClass: 'ic-ts',
-  lang: 'TypeScript', render: 'md', git: '', lines: 42,
-  body: `<div class="st-root">
-  <div class="st-win">
-    <div class="st-bar">
-      <span class="st-dot" style="background:#e0664b"></span>
-      <span class="st-dot" style="background:#d8a94e"></span>
-      <span class="st-dot" style="background:#6f9e63"></span>
-      <span class="st-fname">skills / <b>skills.ts</b></span>
-    </div>
-    <div class="st-body">
-      <h1 class="st-title">Skills</h1>
-      <div class="st-comment">// The stack, as a typed object. Hover-worthy.</div>
-      <div class="st-decl"><span class="st-kw">export const </span><span class="st-var">skills</span><span class="st-brace">: </span><span class="st-type">SkillSet</span><span class="st-brace"> = {</span></div>
-      <div class="st-row">
-        <div class="st-key">languages<span class="col">:</span></div>
-        <div class="st-arr"><span class="st-br">[</span><span class="st-chip">Python</span><span class="st-chip">JavaScript</span><span class="st-chip">TypeScript</span><span class="st-chip">SQL</span><span class="st-chip">C#</span><span class="st-chip">HTML/CSS</span><span class="st-br">]</span></div>
-      </div>
-      <div class="st-row">
-        <div class="st-key">aiMl<span class="col">:</span></div>
-        <div class="st-arr"><span class="st-br">[</span><span class="st-chip">PyTorch</span><span class="st-chip">scikit-learn</span><span class="st-chip">Transformers</span><span class="st-chip">Hugging Face</span><span class="st-chip">YOLO</span><span class="st-chip">OpenCV</span><span class="st-chip">Pandas</span><span class="st-chip">LlamaIndex</span><span class="st-chip">RAGAS</span><span class="st-br">]</span></div>
-      </div>
-      <div class="st-row">
-        <div class="st-key">llmsAndRag<span class="col">:</span></div>
-        <div class="st-arr"><span class="st-br">[</span><span class="st-chip">RAG</span><span class="st-chip">GraphRAG</span><span class="st-chip">Multimodal RAG</span><span class="st-chip">LoRA / QLoRA</span><span class="st-chip">LLaMA 3</span><span class="st-chip">LLaVA</span><span class="st-chip">ColPali</span><span class="st-chip">Prompt Engineering</span><span class="st-br">]</span></div>
-      </div>
-      <div class="st-row">
-        <div class="st-key">knowledgeRep<span class="col">:</span></div>
-        <div class="st-arr"><span class="st-br">[</span><span class="st-chip">RDF/OWL</span><span class="st-chip">SPARQL</span><span class="st-chip">RDFLib</span><span class="st-chip">Protégé</span><span class="st-chip">Apache Jena</span><span class="st-chip">Ontology Design Patterns</span><span class="st-chip">Knowledge Graphs</span><span class="st-br">]</span></div>
-      </div>
-      <div class="st-row">
-        <div class="st-key">databases<span class="col">:</span></div>
-        <div class="st-arr"><span class="st-br">[</span><span class="st-chip">Neo4j</span><span class="st-chip">PostgreSQL</span><span class="st-chip">MySQL</span><span class="st-chip">MongoDB</span><span class="st-chip">Redis</span><span class="st-chip">Jena Fuseki</span><span class="st-br">]</span></div>
-      </div>
-      <div class="st-row">
-        <div class="st-key">systemsHpc<span class="col">:</span></div>
-        <div class="st-arr"><span class="st-br">[</span><span class="st-chip">CUDA</span><span class="st-chip">PyCUDA</span><span class="st-chip">SLURM</span><span class="st-chip">Singularity</span><span class="st-chip">Docker</span><span class="st-chip">Linux</span><span class="st-chip">AWS</span><span class="st-chip">WSU HPC (FRY node)</span><span class="st-br">]</span></div>
-      </div>
-      <div class="st-row">
-        <div class="st-key">webAndApis<span class="col">:</span></div>
-        <div class="st-arr"><span class="st-br">[</span><span class="st-chip">FastAPI</span><span class="st-chip">React</span><span class="st-chip">Node.js</span><span class="st-chip">Django</span><span class="st-chip">GraphQL</span><span class="st-chip">REST</span><span class="st-chip">Prisma</span><span class="st-br">]</span></div>
-      </div>
-      <div class="st-row">
-        <div class="st-key">security<span class="col">:</span></div>
-        <div class="st-arr"><span class="st-br">[</span><span class="st-chip">SOAR</span><span class="st-chip">SIEM</span><span class="st-chip">CSPM</span><span class="st-chip">AWS Security</span><span class="st-chip">MeTRA Risk Assessment</span><span class="st-br">]</span></div>
-      </div>
-      <div class="st-row">
-        <div class="st-key">tools<span class="col">:</span></div>
-        <div class="st-arr"><span class="st-br">[</span><span class="st-chip">Git</span><span class="st-chip">VS Code</span><span class="st-chip">Jupyter</span><span class="st-chip">yEd</span><span class="st-chip">ComfyUI</span><span class="st-chip">Premiere Pro</span><span class="st-br">]</span></div>
-      </div>
-      <div class="st-explore">
-        <div class="st-comment" style="margin:0 0 12px">// always learning →</div>
-        <div class="st-row">
-          <div class="st-key">currentlyExploring<span class="col">:</span></div>
-          <div class="st-arr"><span class="st-br">[</span><span class="st-echip">Agentic RAG</span><span class="st-echip">Neuro-symbolic reasoning</span><span class="st-br">]</span></div>
-        </div>
-      </div>
-      <div class="st-close"><span class="st-brace">};</span></div>
-    </div>
-  </div>
-</div>`
+  lang: 'TypeScript', render: 'code', git: '', lines: 42,
+  body: `<span class="c">// The stack, as a typed object. Hover-worthy.</span>
+<span class="k">export const</span> <span class="cn">skills</span><span class="pu">:</span> <span class="t">SkillSet</span> <span class="pu">=</span> <span class="pu">{</span>
+  <span class="p">languages</span><span class="pu">:</span> <span class="pu">[</span><span class="s">"Python"</span><span class="pu">,</span> <span class="s">"JavaScript"</span><span class="pu">,</span> <span class="s">"TypeScript"</span><span class="pu">,</span> <span class="s">"SQL"</span><span class="pu">,</span> <span class="s">"C#"</span><span class="pu">,</span> <span class="s">"HTML/CSS"</span><span class="pu">]</span><span class="pu">,</span>
+
+  <span class="p">aiMl</span><span class="pu">:</span> <span class="pu">[</span><span class="s">"PyTorch"</span><span class="pu">,</span> <span class="s">"scikit-learn"</span><span class="pu">,</span> <span class="s">"Transformers"</span><span class="pu">,</span> <span class="s">"Hugging Face"</span><span class="pu">,</span>
+           <span class="s">"YOLO"</span><span class="pu">,</span> <span class="s">"OpenCV"</span><span class="pu">,</span> <span class="s">"Pandas"</span><span class="pu">,</span> <span class="s">"LlamaIndex"</span><span class="pu">,</span> <span class="s">"RAGAS"</span><span class="pu">]</span><span class="pu">,</span>
+
+  <span class="p">llmsAndRag</span><span class="pu">:</span> <span class="pu">[</span><span class="s">"RAG"</span><span class="pu">,</span> <span class="s">"GraphRAG"</span><span class="pu">,</span> <span class="s">"Multimodal RAG"</span><span class="pu">,</span> <span class="s">"LoRA / QLoRA"</span><span class="pu">,</span>
+               <span class="s">"LLaMA 3"</span><span class="pu">,</span> <span class="s">"LLaVA"</span><span class="pu">,</span> <span class="s">"ColPali"</span><span class="pu">,</span> <span class="s">"Prompt Engineering"</span><span class="pu">]</span><span class="pu">,</span>
+
+  <span class="p">knowledgeRep</span><span class="pu">:</span> <span class="pu">[</span><span class="s">"RDF/OWL"</span><span class="pu">,</span> <span class="s">"SPARQL"</span><span class="pu">,</span> <span class="s">"RDFLib"</span><span class="pu">,</span> <span class="s">"Protégé"</span><span class="pu">,</span>
+                 <span class="s">"Apache Jena"</span><span class="pu">,</span> <span class="s">"Ontology Design Patterns"</span><span class="pu">,</span> <span class="s">"Knowledge Graphs"</span><span class="pu">]</span><span class="pu">,</span>
+
+  <span class="p">databases</span><span class="pu">:</span> <span class="pu">[</span><span class="s">"Neo4j"</span><span class="pu">,</span> <span class="s">"PostgreSQL"</span><span class="pu">,</span> <span class="s">"MySQL"</span><span class="pu">,</span> <span class="s">"MongoDB"</span><span class="pu">,</span> <span class="s">"Redis"</span><span class="pu">,</span> <span class="s">"Jena Fuseki"</span><span class="pu">]</span><span class="pu">,</span>
+
+  <span class="p">systemsHpc</span><span class="pu">:</span> <span class="pu">[</span><span class="s">"CUDA"</span><span class="pu">,</span> <span class="s">"PyCUDA"</span><span class="pu">,</span> <span class="s">"SLURM"</span><span class="pu">,</span> <span class="s">"Singularity"</span><span class="pu">,</span> <span class="s">"Docker"</span><span class="pu">,</span>
+               <span class="s">"Linux"</span><span class="pu">,</span> <span class="s">"AWS"</span><span class="pu">,</span> <span class="s">"WSU HPC (FRY node)"</span><span class="pu">]</span><span class="pu">,</span>
+
+  <span class="p">webAndApis</span><span class="pu">:</span> <span class="pu">[</span><span class="s">"FastAPI"</span><span class="pu">,</span> <span class="s">"React"</span><span class="pu">,</span> <span class="s">"Node.js"</span><span class="pu">,</span> <span class="s">"Django"</span><span class="pu">,</span> <span class="s">"GraphQL"</span><span class="pu">,</span> <span class="s">"REST"</span><span class="pu">,</span> <span class="s">"Prisma"</span><span class="pu">]</span><span class="pu">,</span>
+
+  <span class="p">security</span><span class="pu">:</span> <span class="pu">[</span><span class="s">"SOAR"</span><span class="pu">,</span> <span class="s">"SIEM"</span><span class="pu">,</span> <span class="s">"CSPM"</span><span class="pu">,</span> <span class="s">"AWS Security"</span><span class="pu">,</span> <span class="s">"MeTRA Risk Assessment"</span><span class="pu">]</span><span class="pu">,</span>
+
+  <span class="p">tools</span><span class="pu">:</span> <span class="pu">[</span><span class="s">"Git"</span><span class="pu">,</span> <span class="s">"VS Code"</span><span class="pu">,</span> <span class="s">"Jupyter"</span><span class="pu">,</span> <span class="s">"yEd"</span><span class="pu">,</span> <span class="s">"ComfyUI"</span><span class="pu">,</span> <span class="s">"Premiere Pro"</span><span class="pu">]</span><span class="pu">,</span>
+
+  <span class="c">// always learning →</span>
+  <span class="p">currentlyExploring</span><span class="pu">:</span> <span class="pu">[</span><span class="s">"Agentic RAG"</span><span class="pu">,</span> <span class="s">"Neuro-symbolic reasoning"</span><span class="pu">]</span><span class="pu">,</span>
+<span class="pu">}</span><span class="pu">;</span>`
 };
 
 /* ---------- contact.md ---------- */
