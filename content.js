@@ -209,7 +209,7 @@ FILES['README.md'] = {
       <span class="readme-repo-row" data-open="graphrag.md"><span class="readme-repo-code">projects/</span><span class="readme-repo-desc">Research &amp; engineering, one file each</span><span class="readme-repo-arrow">→</span></span>
       <span class="readme-repo-row" data-open="research.md"><span class="readme-repo-code">experience/</span><span class="readme-repo-desc">research.md + work.md</span><span class="readme-repo-arrow">→</span></span>
       <span class="readme-repo-row" data-open="skills.ts"><span class="readme-repo-code">skills.ts</span><span class="readme-repo-desc">The stack, as a typed object</span><span class="readme-repo-arrow">→</span></span>
-      <span class="readme-repo-row" data-open="education.json"><span class="readme-repo-code">education.json</span><span class="readme-repo-desc">Degrees</span><span class="readme-repo-arrow">→</span></span>
+      <span class="readme-repo-row" data-open="education.md"><span class="readme-repo-code">education.md</span><span class="readme-repo-desc">Degrees</span><span class="readme-repo-arrow">→</span></span>
       <span class="readme-repo-row" data-open="publications.md"><span class="readme-repo-code">publications.md</span><span class="readme-repo-desc">Peer-reviewed research</span><span class="readme-repo-arrow">→</span></span>
       <span class="readme-repo-row" data-open="contact.md"><span class="readme-repo-code">contact.md</span><span class="readme-repo-desc">Let's talk</span><span class="readme-repo-arrow">→</span></span>
     </div>
@@ -665,29 +665,41 @@ FILES['work.md'] = {
 </div>`
 };
 
-/* ---------- education.json ---------- */
-FILES['education.json'] = {
-  name: 'education.json', path: 'portfolio/education/education.json', icon: 'json', iconClass: 'ic-json',
-  lang: 'JSON', render: 'code', git: '', lines: 22,
-  body: `<span class="pu">{</span>
-  <span class="p">"degrees"</span><span class="pu">:</span> <span class="pu">[</span>
-    <span class="pu">{</span>
-      <span class="p">"school"</span><span class="pu">:</span> <span class="s">"Wright State University"</span><span class="pu">,</span>
-      <span class="p">"location"</span><span class="pu">:</span> <span class="s">"Dayton, OH"</span><span class="pu">,</span>
-      <span class="p">"degree"</span><span class="pu">:</span> <span class="s">"M.S. in Computer Science"</span><span class="pu">,</span>
-      <span class="p">"graduation"</span><span class="pu">:</span> <span class="s">"Dec 2026 (expected)"</span><span class="pu">,</span>
-      <span class="p">"thesis"</span><span class="pu">:</span> <span class="s">"GraphRAG — Ontology-Grounded Retrieval-Augmented Generation for Knowledge-Intensive AI Systems"</span><span class="pu">,</span>
-      <span class="p">"advisor"</span><span class="pu">:</span> <span class="s">"Cogan Shimizu"</span><span class="pu">,</span>
-      <span class="p">"lab"</span><span class="pu">:</span> <span class="s">"KASTLE (Knowledge and Skill Transfer Laboratory)"</span>
-    <span class="pu">}</span><span class="pu">,</span>
-    <span class="pu">{</span>
-      <span class="p">"school"</span><span class="pu">:</span> <span class="s">"Tribhuvan University"</span><span class="pu">,</span>
-      <span class="p">"location"</span><span class="pu">:</span> <span class="s">"Kirtipur, Kathmandu, Nepal"</span><span class="pu">,</span>
-      <span class="p">"degree"</span><span class="pu">:</span> <span class="s">"B.Sc. in Computer Science &amp; Information Technology"</span><span class="pu">,</span>
-      <span class="p">"graduation"</span><span class="pu">:</span> <span class="s">"Jul 2022"</span>
-    <span class="pu">}</span>
-  <span class="pu">]</span>
-<span class="pu">}</span>`
+/* ---------- education.md ---------- */
+FILES['education.md'] = {
+  name: 'education.md', path: 'portfolio/education/education.md', icon: 'md', iconClass: 'ic-md',
+  lang: 'Markdown', render: 'md', git: '', lines: 28,
+  body: `<div class="ed-root">
+  <p class="ed-eyebrow">education / <b>education.md</b></p>
+  <h1 class="ed-title">Education</h1>
+  <div class="ed-entry">
+    <span class="ed-num">01</span>
+    <div>
+      <div class="ed-erow">
+        <h2 class="ed-school">Wright State University</h2>
+        <span class="ed-period">Dec 2026 — expected</span>
+      </div>
+      <p class="ed-degree">M.S. in Computer Science</p>
+      <p class="ed-loc">Dayton, OH</p>
+      <div class="ed-thesis">
+        <span class="ed-thlab">Thesis</span>
+        <p class="ed-thtext">GraphRAG — Ontology-Grounded Retrieval-Augmented Generation for Knowledge-Intensive AI Systems</p>
+        <p class="ed-credit">Advised by <b>Cogan Shimizu</b> · KASTLE — Knowledge and Skill Transfer Laboratory</p>
+      </div>
+    </div>
+  </div>
+  <div class="ed-entry">
+    <span class="ed-num">02</span>
+    <div>
+      <div class="ed-erow">
+        <h2 class="ed-school">Tribhuvan University</h2>
+        <span class="ed-period">Jul 2022</span>
+      </div>
+      <p class="ed-degree">B.Sc. in Computer Science &amp; Information Technology</p>
+      <p class="ed-loc">Kirtipur, Kathmandu, Nepal</p>
+    </div>
+  </div>
+</div>`
 };
 
 /* ---------- skills.ts ---------- */
@@ -868,7 +880,7 @@ const TREE = [
     { type: 'file', id: 'publications.md' },
   ]},
   { type: 'folder', name: 'education', open: false, children: [
-    { type: 'file', id: 'education.json' },
+    { type: 'file', id: 'education.md' },
   ]},
   { type: 'folder', name: 'certifications', open: false, children: [
     { type: 'file', id: 'certifications.md' },
