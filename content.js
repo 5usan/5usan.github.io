@@ -61,56 +61,120 @@ FILES['README.md'] = {
   name: 'README.md', path: 'portfolio/README.md', icon: 'md', iconClass: 'ic-md',
   lang: 'Markdown', render: 'md', git: 'M',
   body: `
-  <div class="hero">
-    <div class="htext">
-      <h1>Hi, I'm Susan Shrestha <span style="font-size:26px">👋</span></h1>
-      <div class="subtitle">// AI / ML Researcher · M.S. Computer Science</div>
+  <div id="readme-top" class="readme-hero">
+    <div class="readme-hero-text">
+      <p class="readme-eyebrow">// <b>AI / ML Researcher</b> · M.S. Computer Science</p>
+      <h1 class="readme-h1">Hi, I'm Susan<br>Shrestha 👋</h1>
       <p class="lede">I build <strong>knowledge-grounded AI</strong> — systems where large language models retrieve from
-      structured ontologies and knowledge graphs, so their answers are auditable, traceable, and actually trustworthy.</p>
-      <div class="chips">
-        <span class="chip ok"><span class="dotpulse"></span>Open to 2026 new-grad &amp; research roles</span>
-        <span class="chip accent">GraphRAG</span>
-        <span class="chip accent">Knowledge Graphs</span>
-        <span class="chip accent">LLM Fine-Tuning</span>
+      structured ontologies and knowledge graphs, so their answers are auditable, traceable, and <strong>actually trustworthy</strong>.</p>
+      <div class="readme-badges">
+        <span class="readme-badge live"><span class="pulse"></span>Open to 2026 new-grad &amp; research roles</span>
+        <span class="readme-badge">GraphRAG</span>
+        <span class="readme-badge">Knowledge Graphs</span>
+        <span class="readme-badge">LLM Fine-Tuning</span>
+      </div>
+      <div class="readme-cta">
+        <span class="readme-btn primary" data-scroll="explore">Explore the work →</span>
+        <span class="readme-btn" data-open="contact.md">Get in touch</span>
+      </div>
+      <div class="readme-meta">
+        <span>Fairborn, Ohio</span>
+        <span>Wright State University · KASTLE Lab</span>
+        <span>github.com/5usan</span>
       </div>
     </div>
-    <div class="avatar"><img src="assets/profile_sq.png" alt="Susan Shrestha" loading="eager"></div>
+    <div class="readme-photo-card">
+      <div class="readme-photo-frame">
+        <img src="assets/profile.png" alt="Susan Shrestha" loading="eager">
+        <span class="readme-photo-cap">susan.jpg</span>
+      </div>
+      <div class="readme-pstats">
+        <div class="readme-pstat"><span>Projects shipped</span><b>5</b></div>
+        <div class="readme-pstat"><span>Focus</span><b>GraphRAG</b></div>
+        <div class="readme-pstat"><span>Status</span><b>2026 grad</b></div>
+      </div>
+    </div>
   </div>
 
-  <div class="meta-row">
-    <span class="mi">${ICONS.pin} Fairborn, Ohio</span>
-    <span class="mi">${ICONS.account} Wright State University · KASTLE Lab</span>
-    <span class="mi">${ICONS.git} github.com/5usan</span>
+  <section class="readme-section" id="about">
+    <div class="readme-sec-head">
+      <span class="readme-sec-num">01</span>
+      <span class="readme-sec-title">About</span>
+      <span class="readme-sec-rule"></span>
+    </div>
+    <div class="readme-prose">
+      <p>I'm a graduate researcher focused on the intersection of <strong>symbolic knowledge representation</strong> and
+      <strong>neural retrieval</strong>. My thesis builds <em>GraphRAG</em> — a retrieval-augmented generation framework that
+      grounds LLM outputs directly in RDF ontologies, so every answer can be traced back to a formal competency question.</p>
+      <p>Before grad school I spent two years shipping production software — security automation platforms, report engines,
+      and full-stack web apps — which taught me how research ideas survive contact with real systems, real latency, and
+      real users.</p>
+    </div>
+  </section>
+
+  <section class="readme-section" id="now">
+    <div class="readme-sec-head">
+      <span class="readme-sec-num">02</span>
+      <span class="readme-sec-title">What I'm working on now</span>
+      <span class="readme-sec-rule"></span>
+    </div>
+    <div class="readme-now">
+      <div class="readme-now-row">
+        <span class="readme-now-mark">01</span>
+        <span class="readme-now-body"><b>Graduate Research Assistant @ KASTLE Lab</b> — ontology chunking for RAG, plus the Heliophysics Knowledge Network.</span>
+      </div>
+      <div class="readme-now-row">
+        <span class="readme-now-mark">02</span>
+        <span class="readme-now-body"><b>AI Developer @ Wright State</b> — fine-tuning LLaMA 3 for historical personas, voice cloning, and AI video podcasts.</span>
+      </div>
+      <div class="readme-now-row">
+        <span class="readme-now-mark">03</span>
+        <span class="readme-now-body"><b>M.S. thesis: GraphRAG</b> — deployed on Wright State's FRY HPC cluster.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="readme-section" id="explore">
+    <div class="readme-sec-head">
+      <span class="readme-sec-num">03</span>
+      <span class="readme-sec-title">Repository map</span>
+      <span class="readme-sec-rule"></span>
+    </div>
+    <p class="readme-repo-intro">This portfolio is a workspace. Each file is a way in — pick a directory to browse
+    the research, or hit <code>contact.md</code> if you'd rather just talk.</p>
+    <div class="readme-repo">
+      <span class="readme-repo-row" data-open="graphrag.md"><span class="readme-repo-code">projects/</span><span class="readme-repo-desc">Research &amp; engineering, one file each</span><span class="readme-repo-arrow">→</span></span>
+      <span class="readme-repo-row" data-open="research.md"><span class="readme-repo-code">experience/</span><span class="readme-repo-desc">research.md + work.json</span><span class="readme-repo-arrow">→</span></span>
+      <span class="readme-repo-row" data-open="skills.ts"><span class="readme-repo-code">skills.ts</span><span class="readme-repo-desc">The stack, as a typed object</span><span class="readme-repo-arrow">→</span></span>
+      <span class="readme-repo-row" data-open="education.json"><span class="readme-repo-code">education.json</span><span class="readme-repo-desc">Degrees</span><span class="readme-repo-arrow">→</span></span>
+      <span class="readme-repo-row" data-open="publications.md"><span class="readme-repo-code">publications.md</span><span class="readme-repo-desc">Peer-reviewed research</span><span class="readme-repo-arrow">→</span></span>
+      <span class="readme-repo-row" data-open="contact.md"><span class="readme-repo-code">contact.md</span><span class="readme-repo-desc">Let's talk</span><span class="readme-repo-arrow">→</span></span>
+    </div>
+  </section>
+
+  <div class="readme-quote-sec">
+    <div class="readme-quote">
+      <span class="readme-quote-mark">"</span>
+      <p>Grounding generative AI in structured knowledge — making the black box auditable, one ontology at a time.</p>
+    </div>
   </div>
 
-  <h2>About</h2>
-  <p>I'm a graduate researcher focused on the intersection of <strong>symbolic knowledge representation</strong> and
-  <strong>neural retrieval</strong>. My thesis builds <em>GraphRAG</em> — a retrieval-augmented generation framework that
-  grounds LLM outputs directly in RDF ontologies, so every answer can be traced back to a formal competency question.</p>
-  <p>Before grad school I spent two years shipping production software — security automation platforms, report engines,
-  and full-stack web apps — which taught me how research ideas survive contact with real systems, real latency, and
-  real users.</p>
-
-  <h2>What I'm working on right now</h2>
-  <ul>
-    <li><strong>Graduate Research Assistant @ KASTLE Lab</strong> — ontology chunking for RAG, plus the Heliophysics Knowledge Network.</li>
-    <li><strong>AI Developer @ Wright State</strong> — fine-tuning LLaMA 3 for historical personas, voice cloning, and AI video podcasts.</li>
-    <li><strong>M.S. thesis: GraphRAG</strong> — deployed on Wright State's FRY HPC cluster.</li>
-  </ul>
-
-  <h2>Repository map</h2>
-  <p>This portfolio is a workspace. Open files from the explorer on the left, hit
-  <code>⌘P</code> to jump anywhere, or pop open the <strong>terminal</strong> below and type <code>help</code>.</p>
-  <ul>
-    <li><code>projects/</code> — research & engineering projects, one file each</li>
-    <li><code>experience/</code> — research &amp; work history</li>
-    <li><code>publications/</code> — peer-reviewed research</li>
-    <li><code>skills/</code> — the stack, as a typed object</li>
-    <li><code>education/</code> — degrees · <code>certifications/</code> — verified credentials</li>
-    <li><code>contact/</code> — let's talk</li>
-  </ul>
-
-  <blockquote>"Grounding generative AI in structured knowledge — making the black box auditable, one ontology at a time."</blockquote>
+  <footer class="readme-footer" id="contact">
+    <div class="readme-footer-grid">
+      <div>
+        <h3>Let's build something auditable.</h3>
+        <div class="readme-footer-links">
+          <a class="readme-btn primary" href="https://github.com/5usan" target="_blank" rel="noopener">github.com/5usan →</a>
+          <span class="readme-btn" data-scroll="readme-top">Back to top</span>
+        </div>
+      </div>
+      <div class="readme-colophon">
+        SUSAN SHRESTHA — PORTFOLIO '26<br>
+        Fairborn, Ohio · Wright State University<br>
+        Open to 2026 new-grad &amp; research roles
+      </div>
+    </div>
+  </footer>
   `
 };
 

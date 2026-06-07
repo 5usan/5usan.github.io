@@ -16,11 +16,11 @@
     previewTab: null,       // single-click preview tab (italic)
   };
 
-  const THEME_LABEL = { light: 'Light+ (default light)', dark: 'Dark+ (default dark)', onedark: 'One Dark Pro', monokai: 'Monokai' };
-  const THEME_ORDER = ['light', 'dark', 'onedark', 'monokai'];
+  const THEME_LABEL = { light: 'Light+ (default light)', dark: 'Dark+ (default dark)', onedark: 'One Dark Pro', monokai: 'Monokai', rust: 'Rust' };
+  const THEME_ORDER = ['light', 'dark', 'onedark', 'monokai', 'rust'];
 
   function systemTheme() {
-    return (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark';
+    return (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'rust';
   }
 
   function applyTheme(t, persist = true) {
@@ -165,6 +165,13 @@
     host.querySelectorAll('[data-open]').forEach(el => {
       el.addEventListener('click', () => openFile(el.dataset.open, true));
     });
+    // smooth-scroll to in-page anchors within the editor container
+    host.querySelectorAll('[data-scroll]').forEach(el => {
+      el.addEventListener('click', () => {
+        const target = host.querySelector('#' + el.dataset.scroll);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
   }
 
   function renderStatus() {
@@ -204,6 +211,7 @@
         { label: 'Theme: Dark+ (default dark)', sub: 'theme', action: () => applyTheme('dark'), icon: 'settings' },
         { label: 'Theme: One Dark Pro', sub: 'theme', action: () => applyTheme('onedark'), icon: 'settings' },
         { label: 'Theme: Monokai', sub: 'theme', action: () => applyTheme('monokai'), icon: 'settings' },
+        { label: 'Theme: Rust', sub: 'theme', action: () => applyTheme('rust'), icon: 'settings' },
         { label: 'Toggle Integrated Terminal', sub: '⌃`', action: togglePanel, icon: 'terminal' },
         { label: 'View: Close All Editors', sub: '', action: () => { state.openTabs = []; state.active = null; render(); }, icon: 'close' },
         { label: 'Run: hire-me', sub: 'easter egg', action: () => { openTerminalCmd('hire-me'); }, icon: 'run' },
@@ -296,7 +304,7 @@
     ['certs', 'verified certifications'],
     ['contact / email', 'how to reach me'],
     ['open <file>', 'open a file in the editor'],
-    ['theme <name>', 'light · dark · onedark · monokai'],
+    ['theme <name>', 'light · dark · onedark · monokai · rust'],
     ['hire-me', '🎉 the important one'],
     ['sudo', 'try it'],
     ['clear', 'clear the terminal'],
@@ -384,8 +392,8 @@
         break;
       }
       case 'theme': {
-        if (['light','dark','onedark','monokai'].includes(arg)) { applyTheme(arg); termWrite(`<span class="term-green">✓</span> theme → ${THEME_LABEL[arg]}`); }
-        else termWrite(`<span class="term-dim">usage: theme [light | dark | onedark | monokai]</span>`);
+        if (['light','dark','onedark','monokai','rust'].includes(arg)) { applyTheme(arg); termWrite(`<span class="term-green">✓</span> theme → ${THEME_LABEL[arg]}`); }
+        else termWrite(`<span class="term-dim">usage: theme [light | dark | onedark | monokai | rust]</span>`);
         break;
       }
       case 'hire-me': case 'hireme':
@@ -500,6 +508,58 @@
     });
   }
 
+  /* ---------- drag-to-resize the sidebar ---------- */
+  function setupSidebarResizer() {
+    const resizer = $('#sidebar-resizer');
+    const sidebar = $('.sidebar');
+    if (!resizer || !sidebar) return;
+
+    const MIN = 160;
+    const MAX = 480;
+    const root = document.documentElement;
+
+    function clamp(w) { return Math.max(MIN, Math.min(w, MAX)); }
+
+    const saved = parseInt(localStorage.getItem('ss-sidebar-w') || '', 10);
+    if (saved) root.style.setProperty('--sidebar-w', clamp(saved) + 'px');
+
+    let dragging = false, lastW = 0;
+    function onDown(e) {
+      lastW = sidebar.getBoundingClientRect().width;
+      dragging = true;
+      document.body.classList.add('resizing-sidebar');
+      document.body.style.cursor = 'col-resize';
+      document.body.style.userSelect = 'none';
+      e.preventDefault();
+      window.addEventListener('mousemove', onMove);
+      window.addEventListener('mouseup', onUp);
+    }
+    function onMove(e) {
+      if (!dragging) return;
+      lastW = clamp(e.clientX - sidebar.getBoundingClientRect().left);
+      root.style.setProperty('--sidebar-w', lastW + 'px');
+    }
+    function onUp() {
+      if (!dragging) return;
+      dragging = false;
+      document.body.classList.remove('resizing-sidebar');
+      document.body.style.cursor = '';
+      document.body.style.userSelect = '';
+      if (lastW) localStorage.setItem('ss-sidebar-w', String(lastW));
+      window.removeEventListener('mousemove', onMove);
+      window.removeEventListener('mouseup', onUp);
+    }
+    resizer.addEventListener('mousedown', onDown);
+    resizer.addEventListener('dblclick', () => {
+      root.style.removeProperty('--sidebar-w');
+      localStorage.removeItem('ss-sidebar-w');
+    });
+    window.addEventListener('resize', () => {
+      const w = parseInt(root.style.getPropertyValue('--sidebar-w') || '', 10);
+      if (w) root.style.setProperty('--sidebar-w', clamp(w) + 'px');
+    });
+  }
+
   /* ============================================================
      Toast
      ============================================================ */
@@ -580,8 +640,9 @@
     $('#panel-close')?.addEventListener('click', togglePanel);
     $('#panel-trash')?.addEventListener('click', () => runCommand('clear'));
 
-    // drag-to-resize the terminal panel (horizontal)
+    // drag-to-resize the terminal panel and sidebar
     setupPanelResizer();
+    setupSidebarResizer();
 
     // status bar interactions
     $('#sb-theme')?.addEventListener('click', cycleTheme);
