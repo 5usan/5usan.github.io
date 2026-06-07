@@ -514,7 +514,7 @@ body {
 .md-view hr { border: 0; border-top: 1px solid var(--border); margin: 26px 0; }
 .md-view .lede { font-size: 16px; color: #c9c9c9; }
 
-.md-view .subtitle { color: var(--md-accent); font-family: var(--mono); font-size: 14px; margin-top: -2px; }
+.md-view .subtitle { color: var(--accent); font-family: var(--mono); font-size: 14px; margin-top: -2px; }
 
 /* badges / chips */
 .chips { display: flex; flex-wrap: wrap; gap: 7px; margin: 14px 0; }
