@@ -670,8 +670,9 @@ FILES['education.md'] = {
   name: 'education.md', path: 'portfolio/education/education.md', icon: 'md', iconClass: 'ic-md',
   lang: 'Markdown', render: 'md', git: '', lines: 28,
   body: `<div class="ed-root">
-  <p class="ed-eyebrow">education / <b>education.md</b></p>
   <h1 class="ed-title">Education</h1>
+  <p class="ed-eyebrow">// education / <b>education.md</b></p>
+  <div class="ed-rule"></div>
   <div class="ed-entry">
     <span class="ed-num">01</span>
     <div>

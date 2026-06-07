@@ -1054,20 +1054,21 @@ html[data-theme="light"] .readme-repo-intro { color: #4a5159; }
   -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
 }
 .ed-root, .ed-root * { box-sizing:border-box; }
-.ed-root .ed-eyebrow { font-family:"JetBrains Mono",monospace; font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin:0 0 18px; }
-.ed-root .ed-eyebrow b { color:var(--accent); font-weight:500; }
-.ed-root .ed-title { font-family:"Bricolage Grotesque",sans-serif; font-weight:700; font-size:74px; letter-spacing:-.04em; line-height:.95; margin:0 0 50px; color:var(--ink); display:block; }
-.ed-root .ed-entry { display:grid; grid-template-columns:88px 1fr; gap:30px; align-items:start; padding:38px 0; border-top:1px solid var(--line); }
-.ed-root .ed-num { font-family:"Bricolage Grotesque",sans-serif; font-weight:700; font-size:40px; letter-spacing:-.03em; color:var(--faint); line-height:1; }
+.ed-root .ed-title { font-family:"Bricolage Grotesque",sans-serif; font-weight:700; font-size:clamp(36px,4vw,48px); letter-spacing:-.03em; line-height:1; margin:0; color:var(--ink); display:block; }
+.ed-root .ed-eyebrow { font-family:"JetBrains Mono",monospace; font-size:14px; color:var(--accent); margin:6px 0 0; }
+.ed-root .ed-eyebrow b { font-weight:500; }
+.ed-root .ed-rule { height:1px; background:var(--line); margin:24px 0 0; }
+.ed-root .ed-entry { display:grid; grid-template-columns:60px 1fr; gap:24px; align-items:start; padding:24px 0 30px; border-top:1px solid var(--line); }
+.ed-root .ed-num { font-family:"Bricolage Grotesque",sans-serif; font-weight:700; font-size:28px; letter-spacing:-.03em; color:var(--faint); line-height:1; }
 .ed-root .ed-erow { display:flex; align-items:baseline; justify-content:space-between; gap:20px; flex-wrap:wrap; }
-.ed-root .ed-school { font-family:"Bricolage Grotesque",sans-serif; font-weight:700; font-size:32px; letter-spacing:-.025em; color:var(--ink); margin:0; line-height:1.04; padding-bottom:0; border-bottom:none; }
-.ed-root .ed-period { font-family:"JetBrains Mono",monospace; font-size:13px; color:var(--accent); white-space:nowrap; }
-.ed-root .ed-degree { font-size:18px; color:var(--ink2); margin:14px 0 3px; font-weight:500; }
+.ed-root .ed-school { font-family:"Bricolage Grotesque",sans-serif; font-weight:700; font-size:25px; letter-spacing:-.02em; color:var(--ink); margin:0; line-height:1.1; padding-bottom:0; border-bottom:none; }
+.ed-root .ed-period { font-family:"JetBrains Mono",monospace; font-size:12.5px; color:var(--accent); white-space:nowrap; }
+.ed-root .ed-degree { font-size:15px; color:var(--ink2); margin:9px 0 2px; font-weight:500; }
 .ed-root .ed-loc { font-family:"JetBrains Mono",monospace; font-size:12px; color:var(--muted); margin:0; }
-.ed-root .ed-thesis { border-left:2px solid var(--accent); padding:6px 0 6px 22px; margin:24px 0 0; }
+.ed-root .ed-thesis { border-left:2px solid var(--accent); padding:6px 0 6px 22px; margin:18px 0 0; }
 .ed-root .ed-thlab { font-family:"JetBrains Mono",monospace; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); display:block; margin-bottom:9px; }
-.ed-root .ed-thtext { font-family:"Bricolage Grotesque",sans-serif; font-weight:500; font-size:20px; line-height:1.4; letter-spacing:-.01em; color:var(--ink); margin:0; max-width:760px; }
-.ed-root .ed-credit { font-family:"JetBrains Mono",monospace; font-size:11.5px; color:var(--muted); margin:14px 0 0; }
+.ed-root .ed-thtext { font-family:"Bricolage Grotesque",sans-serif; font-weight:500; font-size:17px; line-height:1.5; letter-spacing:-.01em; color:var(--ink); margin:0; max-width:760px; }
+.ed-root .ed-credit { font-family:"JetBrains Mono",monospace; font-size:11.5px; color:var(--muted); margin:10px 0 0; }
 .ed-root .ed-credit b { color:var(--ink2); font-weight:500; }
 
 /* pull quote section */
@@ -1115,9 +1116,8 @@ html[data-theme="light"] .readme-repo-intro { color: #4a5159; }
   .proj-meta-source { padding: 8px 0; }
   .proj-body { grid-template-columns: 1fr; }
   .rt-erow { flex-direction: column; gap: 4px; }
-  .ed-root .ed-title { font-size: 48px; }
-  .ed-root .ed-entry { grid-template-columns: 48px 1fr; gap: 16px; }
-  .ed-root .ed-num { font-size: 28px; }
-  .ed-root .ed-school { font-size: 24px; }
+  .ed-root .ed-entry { grid-template-columns: 40px 1fr; gap: 14px; }
+  .ed-root .ed-num { font-size: 20px; }
+  .ed-root .ed-school { font-size: 20px; }
   .ed-root .ed-erow { flex-direction: column; gap: 4px; }
 }
