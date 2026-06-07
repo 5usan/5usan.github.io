@@ -42,6 +42,9 @@ const ICONS = {
   award: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="9" r="6"/><path d="M8.5 13.5L7 21l5-3 5 3-1.5-7.5"/></svg>',
   book: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5a2 2 0 012-2h13v15H6a2 2 0 00-2 2z"/><path d="M4 18.5A2 2 0 016 17h13"/></svg>',
   link: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 15l6-6M10.5 6.5l1-1a4 4 0 015.7 5.7l-1 1M13.5 17.5l-1 1a4 4 0 01-5.7-5.7l1-1"/></svg>',
+  graduation: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 10l10-5 10 5-10 5z"/><path d="M6 13v4c0 1.7 2.7 3 6 3s6-1.3 6-3v-4"/><path d="M20 10v5"/></svg>',
+  group: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="7" r="3"/><path d="M3 19c0-3 2.7-5 6-5s6 2 6 5"/><circle cx="17" cy="8.5" r="2.5"/><path d="M21 19c0-2-1.8-3.5-4-4"/></svg>',
+  leetcode: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 8L3 12l4 4M17 8l4 4-4 4M14 5l-4 14"/></svg>',
 };
 
 /* ---------- helpers for code highlighting ---------- */
@@ -78,11 +81,12 @@ FILES['README.md'] = {
         <span class="readme-btn" data-open="contact.md">Get in touch</span>
       </div>
       <div class="readme-meta">
-        <span>Fairborn, Ohio</span>
-        <span>Wright State University · KASTLE Lab</span>
-        <span><a href="https://github.com/5usan" target="_blank" rel="noopener">github.com/5usan</a></span>
-        <span><a href="https://www.linkedin.com/in/5usan/" target="_blank" rel="noopener">linkedin.com/in/5usan</a></span>
-        <span><a href="https://leetcode.com/u/5usan/" target="_blank" rel="noopener">leetcode.com/u/5usan</a></span>
+        <span>${ICONS.pin} Fairborn, Ohio</span>
+        <span>${ICONS.graduation} Wright State University</span>
+        <span>${ICONS.group} KASTLE Lab</span>
+        <span><a href="https://github.com/5usan" target="_blank" rel="noopener">${ICONS.github} github.com/5usan</a></span>
+        <span><a href="https://www.linkedin.com/in/5usan/" target="_blank" rel="noopener">${ICONS.linkedin} linkedin.com/in/5usan</a></span>
+        <span><a href="https://leetcode.com/u/5usan/" target="_blank" rel="noopener">${ICONS.leetcode} leetcode.com/u/5usan</a></span>
       </div>
     </div>
     <div class="readme-photo-card">
