@@ -1018,8 +1018,10 @@ html[data-theme="light"] .readme-repo-intro { color: #4a5159; }
 /* ── experience timeline — r1-timeline design (exact spec) ── */
 .md-view:has(.rt-root) { padding: 0; }
 .rt-root {
-  --bg:#131210; --surface:#1b1a16; --surface2:#232118; --ink:#f1ede3; --ink2:#c7c0b2;
-  --muted:#8b8576; --faint:#5d584c; --line:#2a2820; --line2:#353225; --accent:#c2562f;
+  --bg: var(--editor); --surface2: var(--md-code-bg);
+  --ink: var(--md-h); --ink2: var(--editor-fg);
+  --muted: var(--breadcrumb-fg); --faint: var(--breadcrumb-fg);
+  --line: var(--border); --line2: var(--border);
   width:100%; background:var(--bg); color:var(--ink); padding:60px 72px;
   font-family:"Instrument Sans",system-ui,sans-serif; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
 }
