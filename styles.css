@@ -1015,6 +1015,22 @@ html[data-theme="light"] .readme-repo-intro { color: #4a5159; }
 .sw-card-arrow { font-family: var(--mono); font-size: 13px; color: #5a5a5a; transition: color .15s, transform .15s; }
 .sw-card:hover .sw-card-arrow { color: var(--accent-hover); transform: translateX(3px); }
 
+/* ── experience timeline ── */
+.xp-timeline { position: relative; padding-left: 32px; margin-top: 28px; border-left: 1px solid var(--border); }
+.xp-entry { position: relative; padding-bottom: 40px; }
+.xp-entry:last-child { padding-bottom: 0; }
+.xp-entry + .xp-entry { border-top: 1px solid var(--border); padding-top: 32px; }
+.xp-dot { position: absolute; left: -38px; top: 6px; width: 11px; height: 11px; border-radius: 50%; background: var(--accent); }
+.xp-header { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 6px; }
+.xp-role { font-family: 'Instrument Sans', var(--ui), sans-serif; font-weight: 700; font-size: 22px; letter-spacing: -.015em; line-height: 1.1; color: var(--md-h); margin: 0; }
+.xp-date { font-family: var(--mono); font-size: 13px; color: var(--accent); white-space: nowrap; flex-shrink: 0; }
+.xp-org { font-size: 14px; color: var(--editor-fg); margin-bottom: 2px; }
+.xp-loc { font-size: 13px; color: #8a8a8a; margin-bottom: 16px; }
+.xp-list { margin: 0 0 16px; padding: 0; list-style: none; }
+.xp-list li { position: relative; padding-left: 20px; font-size: 14px; line-height: 1.65; color: var(--editor-fg); margin-bottom: 10px; }
+.xp-list li:last-child { margin-bottom: 0; }
+.xp-list li::before { content: ''; position: absolute; left: 0; top: 8px; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); opacity: .55; }
+
 /* pull quote section */
 .readme-quote-sec { padding: 76px 0; border-top: 1px solid var(--border); }
 .readme-quote { max-width: 860px; }
@@ -1059,4 +1075,6 @@ html[data-theme="light"] .readme-repo-intro { color: #4a5159; }
   .proj-meta-row { flex-direction: column; gap: 8px; }
   .proj-meta-source { padding: 8px 0; }
   .proj-body { grid-template-columns: 1fr; }
+  .xp-header { flex-direction: column; gap: 2px; }
+  .xp-date { align-self: flex-start; }
 }

@@ -207,7 +207,7 @@ FILES['README.md'] = {
     the research, or hit <code>contact.md</code> if you'd rather just talk.</p>
     <div class="readme-repo">
       <span class="readme-repo-row" data-open="graphrag.md"><span class="readme-repo-code">projects/</span><span class="readme-repo-desc">Research &amp; engineering, one file each</span><span class="readme-repo-arrow">→</span></span>
-      <span class="readme-repo-row" data-open="research.md"><span class="readme-repo-code">experience/</span><span class="readme-repo-desc">research.md + work.json</span><span class="readme-repo-arrow">→</span></span>
+      <span class="readme-repo-row" data-open="research.md"><span class="readme-repo-code">experience/</span><span class="readme-repo-desc">research.md + work.md</span><span class="readme-repo-arrow">→</span></span>
       <span class="readme-repo-row" data-open="skills.ts"><span class="readme-repo-code">skills.ts</span><span class="readme-repo-desc">The stack, as a typed object</span><span class="readme-repo-arrow">→</span></span>
       <span class="readme-repo-row" data-open="education.json"><span class="readme-repo-code">education.json</span><span class="readme-repo-desc">Degrees</span><span class="readme-repo-arrow">→</span></span>
       <span class="readme-repo-row" data-open="publications.md"><span class="readme-repo-code">publications.md</span><span class="readme-repo-desc">Peer-reviewed research</span><span class="readme-repo-arrow">→</span></span>
@@ -561,67 +561,113 @@ FILES['research.md'] = {
   <h1>Research Experience</h1>
   <div class="subtitle">// KASTLE Lab — Knowledge and Skill Transfer Laboratory</div>
 
-  <h2>Graduate Research Assistant — KASTLE Lab</h2>
-  <p><strong>Wright State University</strong> · advised by Cogan Shimizu · Dayton, OH<br>
-  <span style="font-family:var(--mono);color:#8a8a8a">Jun 2025 – Present</span></p>
-  <ul>
-    <li>Architected an <strong>ontology chunking framework</strong> for RAG pipelines — optimizing context windows and
-    increasing LLM accuracy for natural-language → SPARQL translation.</li>
-    <li>Engineered end-to-end <strong>NLP pipelines</strong> with Python, Neo4j, and Apache Jena to automate semantic
-    enrichment and prepare large scientific metadata repositories for AI consumption.</li>
-    <li>Co-developed the <strong>Heliophysics Knowledge Network</strong> — modular, domain-specific knowledge graphs that
-    serve as a deterministic ground-truth layer for downstream generative AI.</li>
-  </ul>
+  <div class="xp-timeline">
 
-  <h2>Graduate Teaching Assistant</h2>
-  <p><strong>Wright State University</strong> · Dayton, OH<br>
-  <span style="font-family:var(--mono);color:#8a8a8a">Aug 2024 – Present</span></p>
-  <ul>
-    <li>Supported course instruction, grading, and office hours for graduate Computer Science courses.</li>
-  </ul>
+    <div class="xp-entry">
+      <div class="xp-dot"></div>
+      <div class="xp-header">
+        <h2 class="xp-role">Graduate Research Assistant</h2>
+        <span class="xp-date">Jun 2025 — Present</span>
+      </div>
+      <div class="xp-org"><strong>Wright State University</strong> · KASTLE Lab · advised by Cogan Shimizu</div>
+      <div class="xp-loc">Dayton, OH</div>
+      <ul class="xp-list">
+        <li>Architected an <strong>ontology chunking framework</strong> for RAG pipelines — optimizing context windows and increasing LLM accuracy for natural-language → SPARQL translation.</li>
+        <li>Engineered end-to-end <strong>NLP pipelines</strong> with Python, Neo4j, and Apache Jena to automate semantic enrichment and prepare large scientific metadata repositories for AI consumption.</li>
+        <li>Co-developed the <strong>Heliophysics Knowledge Network</strong> — modular, domain-specific knowledge graphs that serve as a deterministic ground-truth layer for downstream generative AI.</li>
+      </ul>
+      <div class="chips">
+        <span class="chip">Python</span><span class="chip">Neo4j</span><span class="chip">Apache Jena</span><span class="chip">RAG</span><span class="chip">SPARQL</span>
+      </div>
+    </div>
+
+    <div class="xp-entry">
+      <div class="xp-dot"></div>
+      <div class="xp-header">
+        <h2 class="xp-role">Graduate Teaching Assistant</h2>
+        <span class="xp-date">Aug 2024 — Present</span>
+      </div>
+      <div class="xp-org"><strong>Wright State University</strong></div>
+      <div class="xp-loc">Dayton, OH</div>
+      <ul class="xp-list">
+        <li>Supported course instruction, grading, and office hours for graduate <strong>Computer Science</strong> courses.</li>
+      </ul>
+      <div class="chips">
+        <span class="chip">Teaching</span><span class="chip">Mentoring</span>
+      </div>
+    </div>
+
+  </div>
   `
 };
 
-/* ---------- experience/work.json ---------- */
-FILES['work.json'] = {
-  name: 'work.json', path: 'portfolio/experience/work.json', icon: 'json', iconClass: 'ic-json',
-  lang: 'JSON', render: 'code', git: 'M', lines: 47,
-  body: `<span class="pu">[</span>
-  <span class="pu">{</span>
-    <span class="p">"role"</span><span class="pu">:</span> <span class="s">"AI Developer"</span><span class="pu">,</span>
-    <span class="p">"company"</span><span class="pu">:</span> <span class="s">"Wright State University"</span><span class="pu">,</span>
-    <span class="p">"location"</span><span class="pu">:</span> <span class="s">"Dayton, OH"</span><span class="pu">,</span>
-    <span class="p">"period"</span><span class="pu">:</span> <span class="s">"Jun 2025 – Present"</span><span class="pu">,</span>
-    <span class="p">"highlights"</span><span class="pu">:</span> <span class="pu">[</span>
-      <span class="s">"Fine-tuned LLaMA 3 on custom historical datasets for persona consistency; deployed in a mobile app for real-time conversations with AI historical figures"</span><span class="pu">,</span>
-      <span class="s">"Built voice-cloning solutions with F5 TTS and ElevenLabs to replicate historical voices"</span><span class="pu">,</span>
-      <span class="s">"Produced multi-speaker AI video podcasts integrating Sora frames, WAN 2.0, and ComfyUI pipelines"</span>
-    <span class="pu">]</span>
-  <span class="pu">}</span><span class="pu">,</span>
-  <span class="pu">{</span>
-    <span class="p">"role"</span><span class="pu">:</span> <span class="s">"Software Engineer"</span><span class="pu">,</span>
-    <span class="p">"company"</span><span class="pu">:</span> <span class="s">"Vairav Technology (P) Ltd."</span><span class="pu">,</span>
-    <span class="p">"location"</span><span class="pu">:</span> <span class="s">"Kathmandu, Nepal"</span><span class="pu">,</span>
-    <span class="p">"period"</span><span class="pu">:</span> <span class="s">"Mar 2023 – Aug 2024"</span><span class="pu">,</span>
-    <span class="p">"highlights"</span><span class="pu">:</span> <span class="pu">[</span>
-      <span class="s">"Built a Report Engine to automate log analysis and visualization — cut report generation time by 75%"</span><span class="pu">,</span>
-      <span class="s">"Engineered a SOAR platform automating threat detection and response — reduced SOC analyst workload by 40%"</span><span class="pu">,</span>
-      <span class="s">"Integrated GraphQL into the CMS — cut content load time by 35%"</span><span class="pu">,</span>
-      <span class="s">"Partnered with SOC/SIEM teams for deployment and continuous security monitoring"</span>
-    <span class="pu">]</span>
-  <span class="pu">}</span><span class="pu">,</span>
-  <span class="pu">{</span>
-    <span class="p">"role"</span><span class="pu">:</span> <span class="s">"Full-Stack Developer"</span><span class="pu">,</span>
-    <span class="p">"company"</span><span class="pu">:</span> <span class="s">"Port Pro (P) Ltd."</span><span class="pu">,</span>
-    <span class="p">"location"</span><span class="pu">:</span> <span class="s">"Kathmandu, Nepal"</span><span class="pu">,</span>
-    <span class="p">"period"</span><span class="pu">:</span> <span class="s">"Aug 2022 – Mar 2023"</span><span class="pu">,</span>
-    <span class="p">"highlights"</span><span class="pu">:</span> <span class="pu">[</span>
-      <span class="s">"Automated real-time shipping data updates with Puppeteer — boosted engagement by 30%"</span><span class="pu">,</span>
-      <span class="s">"Built RESTful APIs serving dynamic data to 1,000+ concurrent users"</span><span class="pu">,</span>
-      <span class="s">"Resolved critical web issues across 100+ global teams — cut development time by 40%"</span>
-    <span class="pu">]</span>
-  <span class="pu">}</span>
-<span class="pu">]</span>`
+/* ---------- experience/work.md ---------- */
+FILES['work.md'] = {
+  name: 'work.md', path: 'portfolio/experience/work.md', icon: 'md', iconClass: 'ic-md',
+  lang: 'Markdown', render: 'md', git: 'M',
+  body: `
+  <h1>Work Experience</h1>
+  <div class="subtitle">// industry roles — research to production</div>
+
+  <div class="xp-timeline">
+
+    <div class="xp-entry">
+      <div class="xp-dot"></div>
+      <div class="xp-header">
+        <h2 class="xp-role">AI Developer</h2>
+        <span class="xp-date">Jun 2025 — Present</span>
+      </div>
+      <div class="xp-org"><strong>Wright State University</strong></div>
+      <div class="xp-loc">Dayton, OH</div>
+      <ul class="xp-list">
+        <li>Fine-tuned <strong>LLaMA 3</strong> on custom historical datasets for persona consistency; deployed in a mobile app for real-time conversations with AI historical figures.</li>
+        <li>Built <strong>voice-cloning solutions</strong> with F5-TTS and ElevenLabs to replicate historical voices with high fidelity.</li>
+        <li>Produced multi-speaker <strong>AI video podcasts</strong> integrating Sora frames, WAN 2.0, and ComfyUI pipelines.</li>
+      </ul>
+      <div class="chips">
+        <span class="chip">LLaMA 3</span><span class="chip">F5-TTS</span><span class="chip">ElevenLabs</span><span class="chip">ComfyUI</span>
+      </div>
+    </div>
+
+    <div class="xp-entry">
+      <div class="xp-dot"></div>
+      <div class="xp-header">
+        <h2 class="xp-role">Software Engineer</h2>
+        <span class="xp-date">Mar 2023 — Aug 2024</span>
+      </div>
+      <div class="xp-org"><strong>Vairav Technology (P) Ltd.</strong></div>
+      <div class="xp-loc">Kathmandu, Nepal</div>
+      <ul class="xp-list">
+        <li>Built a <strong>Report Engine</strong> to automate log analysis and visualization — cut report generation time by 75%.</li>
+        <li>Engineered a <strong>SOAR platform</strong> automating threat detection and response — reduced SOC analyst workload by 40%.</li>
+        <li>Integrated <strong>GraphQL</strong> into the CMS — cut content load time by 35%.</li>
+        <li>Partnered with SOC/SIEM teams for deployment and continuous security monitoring.</li>
+      </ul>
+      <div class="chips">
+        <span class="chip">Python</span><span class="chip">GraphQL</span><span class="chip">SOAR</span><span class="chip">Node.js</span>
+      </div>
+    </div>
+
+    <div class="xp-entry">
+      <div class="xp-dot"></div>
+      <div class="xp-header">
+        <h2 class="xp-role">Full-Stack Developer</h2>
+        <span class="xp-date">Aug 2022 — Mar 2023</span>
+      </div>
+      <div class="xp-org"><strong>Port Pro (P) Ltd.</strong></div>
+      <div class="xp-loc">Kathmandu, Nepal</div>
+      <ul class="xp-list">
+        <li>Automated real-time shipping data updates with <strong>Puppeteer</strong> — boosted engagement by 30%.</li>
+        <li>Built <strong>RESTful APIs</strong> serving dynamic data to 1,000+ concurrent users.</li>
+        <li>Resolved critical web issues across 100+ global teams — cut development time by 40%.</li>
+      </ul>
+      <div class="chips">
+        <span class="chip">Puppeteer</span><span class="chip">REST API</span><span class="chip">Node.js</span>
+      </div>
+    </div>
+
+  </div>
+  `
 };
 
 /* ---------- education.json ---------- */
@@ -821,7 +867,7 @@ const TREE = [
   ]},
   { type: 'folder', name: 'experience', open: false, children: [
     { type: 'file', id: 'research.md' },
-    { type: 'file', id: 'work.json' },
+    { type: 'file', id: 'work.md' },
   ]},
   { type: 'folder', name: 'publications', open: false, children: [
     { type: 'file', id: 'publications.md' },
