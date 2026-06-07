@@ -557,117 +557,112 @@ FILES['face-detection.md'] = {
 FILES['research.md'] = {
   name: 'research.md', path: 'portfolio/experience/research.md', icon: 'md', iconClass: 'ic-md',
   lang: 'Markdown', render: 'md', git: 'M',
-  body: `
-  <h1>Research Experience</h1>
-  <div class="subtitle">// KASTLE Lab — Knowledge and Skill Transfer Laboratory</div>
+  body: `<div class="rt-root">
+  <h1 class="rt-title">Research Experience</h1>
+  <p class="rt-tag">// KASTLE Lab — Knowledge and Skill Transfer Laboratory</p>
+  <div class="rt-rule"></div>
+  <div class="rt-tl">
 
-  <div class="xp-timeline">
-
-    <div class="xp-entry">
-      <div class="xp-dot"></div>
-      <div class="xp-header">
-        <h2 class="xp-role">Graduate Research Assistant</h2>
-        <span class="xp-date">Jun 2025 — Present</span>
+    <div class="rt-entry">
+      <div class="rt-erow">
+        <h2 class="rt-role">Graduate Research Assistant</h2>
+        <span class="rt-period">Jun 2025 — Present</span>
       </div>
-      <div class="xp-org"><strong>Wright State University</strong> · KASTLE Lab · advised by Cogan Shimizu</div>
-      <div class="xp-loc">Dayton, OH</div>
-      <ul class="xp-list">
-        <li>Architected an <strong>ontology chunking framework</strong> for RAG pipelines — optimizing context windows and increasing LLM accuracy for natural-language → SPARQL translation.</li>
-        <li>Engineered end-to-end <strong>NLP pipelines</strong> with Python, Neo4j, and Apache Jena to automate semantic enrichment and prepare large scientific metadata repositories for AI consumption.</li>
-        <li>Co-developed the <strong>Heliophysics Knowledge Network</strong> — modular, domain-specific knowledge graphs that serve as a deterministic ground-truth layer for downstream generative AI.</li>
+      <p class="rt-org"><b>Wright State University</b> · KASTLE Lab · advised by Cogan Shimizu</p>
+      <p class="rt-sub">Dayton, OH</p>
+      <ul class="rt-list">
+        <li>Architected an <b>ontology chunking framework</b> for RAG pipelines — optimizing context windows and increasing LLM accuracy for natural-language → SPARQL translation.</li>
+        <li>Engineered end-to-end <b>NLP pipelines</b> with Python, Neo4j, and Apache Jena to automate semantic enrichment and prepare large scientific metadata repositories for AI consumption.</li>
+        <li>Co-developed the <b>Heliophysics Knowledge Network</b> — modular, domain-specific knowledge graphs that serve as a deterministic ground-truth layer for downstream generative AI.</li>
       </ul>
-      <div class="chips">
-        <span class="chip">Python</span><span class="chip">Neo4j</span><span class="chip">Apache Jena</span><span class="chip">RAG</span><span class="chip">SPARQL</span>
+      <div class="rt-tags">
+        <span class="rt-chip">Python</span><span class="rt-chip">Neo4j</span><span class="rt-chip">Apache Jena</span><span class="rt-chip">RAG</span><span class="rt-chip">SPARQL</span>
       </div>
     </div>
 
-    <div class="xp-entry">
-      <div class="xp-dot"></div>
-      <div class="xp-header">
-        <h2 class="xp-role">Graduate Teaching Assistant</h2>
-        <span class="xp-date">Aug 2024 — Present</span>
+    <div class="rt-entry">
+      <div class="rt-erow">
+        <h2 class="rt-role">Graduate Teaching Assistant</h2>
+        <span class="rt-period">Aug 2024 — Present</span>
       </div>
-      <div class="xp-org"><strong>Wright State University</strong></div>
-      <div class="xp-loc">Dayton, OH</div>
-      <ul class="xp-list">
-        <li>Supported course instruction, grading, and office hours for graduate <strong>Computer Science</strong> courses.</li>
+      <p class="rt-org"><b>Wright State University</b></p>
+      <p class="rt-sub">Dayton, OH</p>
+      <ul class="rt-list">
+        <li>Supported course instruction, grading, and office hours for graduate <b>Computer Science</b> courses.</li>
       </ul>
-      <div class="chips">
-        <span class="chip">Teaching</span><span class="chip">Mentoring</span>
+      <div class="rt-tags">
+        <span class="rt-chip">Teaching</span><span class="rt-chip">Mentoring</span>
       </div>
     </div>
 
   </div>
-  `
+</div>`
 };
 
 /* ---------- experience/work.md ---------- */
 FILES['work.md'] = {
   name: 'work.md', path: 'portfolio/experience/work.md', icon: 'md', iconClass: 'ic-md',
   lang: 'Markdown', render: 'md', git: 'M',
-  body: `
-  <h1>Work Experience</h1>
-  <div class="subtitle">// industry roles — research to production</div>
+  body: `<div class="rt-root">
+  <h1 class="rt-title">Work Experience</h1>
+  <p class="rt-tag">// industry roles — research to production</p>
+  <div class="rt-rule"></div>
+  <div class="rt-tl">
 
-  <div class="xp-timeline">
-
-    <div class="xp-entry">
-      <div class="xp-dot"></div>
-      <div class="xp-header">
-        <h2 class="xp-role">AI Developer</h2>
-        <span class="xp-date">Jun 2025 — Present</span>
+    <div class="rt-entry">
+      <div class="rt-erow">
+        <h2 class="rt-role">AI Developer</h2>
+        <span class="rt-period">Jun 2025 — Present</span>
       </div>
-      <div class="xp-org"><strong>Wright State University</strong></div>
-      <div class="xp-loc">Dayton, OH</div>
-      <ul class="xp-list">
-        <li>Fine-tuned <strong>LLaMA 3</strong> on custom historical datasets for persona consistency; deployed in a mobile app for real-time conversations with AI historical figures.</li>
-        <li>Built <strong>voice-cloning solutions</strong> with F5-TTS and ElevenLabs to replicate historical voices with high fidelity.</li>
-        <li>Produced multi-speaker <strong>AI video podcasts</strong> integrating Sora frames, WAN 2.0, and ComfyUI pipelines.</li>
+      <p class="rt-org"><b>Wright State University</b></p>
+      <p class="rt-sub">Dayton, OH</p>
+      <ul class="rt-list">
+        <li>Fine-tuned <b>LLaMA 3</b> on custom historical datasets for persona consistency; deployed in a mobile app for real-time conversations with AI historical figures.</li>
+        <li>Built <b>voice-cloning solutions</b> with F5-TTS and ElevenLabs to replicate historical voices with high fidelity.</li>
+        <li>Produced multi-speaker <b>AI video podcasts</b> integrating Sora frames, WAN 2.0, and ComfyUI pipelines.</li>
       </ul>
-      <div class="chips">
-        <span class="chip">LLaMA 3</span><span class="chip">F5-TTS</span><span class="chip">ElevenLabs</span><span class="chip">ComfyUI</span>
+      <div class="rt-tags">
+        <span class="rt-chip">LLaMA 3</span><span class="rt-chip">F5-TTS</span><span class="rt-chip">ElevenLabs</span><span class="rt-chip">ComfyUI</span>
       </div>
     </div>
 
-    <div class="xp-entry">
-      <div class="xp-dot"></div>
-      <div class="xp-header">
-        <h2 class="xp-role">Software Engineer</h2>
-        <span class="xp-date">Mar 2023 — Aug 2024</span>
+    <div class="rt-entry">
+      <div class="rt-erow">
+        <h2 class="rt-role">Software Engineer</h2>
+        <span class="rt-period">Mar 2023 — Aug 2024</span>
       </div>
-      <div class="xp-org"><strong>Vairav Technology (P) Ltd.</strong></div>
-      <div class="xp-loc">Kathmandu, Nepal</div>
-      <ul class="xp-list">
-        <li>Built a <strong>Report Engine</strong> to automate log analysis and visualization — cut report generation time by 75%.</li>
-        <li>Engineered a <strong>SOAR platform</strong> automating threat detection and response — reduced SOC analyst workload by 40%.</li>
-        <li>Integrated <strong>GraphQL</strong> into the CMS — cut content load time by 35%.</li>
+      <p class="rt-org"><b>Vairav Technology (P) Ltd.</b></p>
+      <p class="rt-sub">Kathmandu, Nepal</p>
+      <ul class="rt-list">
+        <li>Built a <b>Report Engine</b> to automate log analysis and visualization — cut report generation time by 75%.</li>
+        <li>Engineered a <b>SOAR platform</b> automating threat detection and response — reduced SOC analyst workload by 40%.</li>
+        <li>Integrated <b>GraphQL</b> into the CMS — cut content load time by 35%.</li>
         <li>Partnered with SOC/SIEM teams for deployment and continuous security monitoring.</li>
       </ul>
-      <div class="chips">
-        <span class="chip">Python</span><span class="chip">GraphQL</span><span class="chip">SOAR</span><span class="chip">Node.js</span>
+      <div class="rt-tags">
+        <span class="rt-chip">Python</span><span class="rt-chip">GraphQL</span><span class="rt-chip">SOAR</span><span class="rt-chip">Node.js</span>
       </div>
     </div>
 
-    <div class="xp-entry">
-      <div class="xp-dot"></div>
-      <div class="xp-header">
-        <h2 class="xp-role">Full-Stack Developer</h2>
-        <span class="xp-date">Aug 2022 — Mar 2023</span>
+    <div class="rt-entry">
+      <div class="rt-erow">
+        <h2 class="rt-role">Full-Stack Developer</h2>
+        <span class="rt-period">Aug 2022 — Mar 2023</span>
       </div>
-      <div class="xp-org"><strong>Port Pro (P) Ltd.</strong></div>
-      <div class="xp-loc">Kathmandu, Nepal</div>
-      <ul class="xp-list">
-        <li>Automated real-time shipping data updates with <strong>Puppeteer</strong> — boosted engagement by 30%.</li>
-        <li>Built <strong>RESTful APIs</strong> serving dynamic data to 1,000+ concurrent users.</li>
+      <p class="rt-org"><b>Port Pro (P) Ltd.</b></p>
+      <p class="rt-sub">Kathmandu, Nepal</p>
+      <ul class="rt-list">
+        <li>Automated real-time shipping data updates with <b>Puppeteer</b> — boosted engagement by 30%.</li>
+        <li>Built <b>RESTful APIs</b> serving dynamic data to 1,000+ concurrent users.</li>
         <li>Resolved critical web issues across 100+ global teams — cut development time by 40%.</li>
       </ul>
-      <div class="chips">
-        <span class="chip">Puppeteer</span><span class="chip">REST API</span><span class="chip">Node.js</span>
+      <div class="rt-tags">
+        <span class="rt-chip">Puppeteer</span><span class="rt-chip">REST API</span><span class="rt-chip">Node.js</span>
       </div>
     </div>
 
   </div>
-  `
+</div>`
 };
 
 /* ---------- education.json ---------- */
