@@ -1027,10 +1027,10 @@ html[data-theme="light"] .readme-repo-intro { color: #4a5159; }
 .rt-root .rt-title { font-family:"Bricolage Grotesque",sans-serif; font-weight:700; font-size:clamp(36px, 4vw, 48px); letter-spacing:-.03em; margin:0; line-height:1; display:block; color:var(--ink); }
 .rt-root .rt-tag { font-family:"JetBrains Mono",monospace; font-size:14px; color:var(--accent); margin:6px 0 0; }
 .rt-rule { height:1px; background:var(--line); margin:24px 0 0; }
-.rt-tl { position:relative; padding-left:34px; }
+.rt-tl { position:relative; padding-left:22px; }
 .rt-root .rt-tl::before { content:""; position:absolute; left:5px; top:14px; bottom:18px; width:2px; background:linear-gradient(var(--line2),var(--line2)); }
 .rt-entry { position:relative; padding:24px 0 30px; }
-.rt-root .rt-entry::before { content:""; position:absolute; left:-32px; top:30px; width:12px; height:12px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 4px var(--bg); }
+.rt-root .rt-entry::before { content:""; position:absolute; left:-20px; top:30px; width:12px; height:12px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 4px var(--bg); }
 .rt-erow { display:flex; align-items:baseline; justify-content:space-between; gap:20px; flex-wrap:wrap; }
 .rt-root .rt-role { font-family:"Bricolage Grotesque",sans-serif; font-weight:700; font-size:25px; letter-spacing:-.02em; color:var(--ink); margin:0; padding-bottom:0; border-bottom:none; }
 .rt-period { font-family:"JetBrains Mono",monospace; font-size:12.5px; color:var(--accent); white-space:nowrap; }
